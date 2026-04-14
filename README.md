@@ -6,12 +6,12 @@ Currently when this was developed it was purely out of the love the game. Now I 
 Current Project Structure:
 NFL-Projects/
 ├── data/
-│  team-logs/         ← all the team offensive/run play CSVs
-│   player-logs/      ← C.Sutton, JSN, M.Mims, T.Franklin CSVs
-│   play-by-play/     ← play_by_play_2025.csv
+│   ├── team-logs/         ← all the team offensive/run play CSVs
+│   ├── player-logs/      ← C.Sutton, JSN, M.Mims, T.Franklin CSVs
+│   └──play-by-play/     ← play_by_play_2025.csv
 ├── Bo-Nix-Analysis/
 │   ├── data/        ← Bo Nix CSVs
-│   ├── notebooks/   ← all Bo Nix notebooks (consolidating subfolders)
+│   └── notebooks/   ← all Bo Nix notebooks (consolidating subfolders)
 ├── notebooks/       ← Comprehensive_Player_Analysis and future notebooks
 ├── .gitignore
 ├── README.md
