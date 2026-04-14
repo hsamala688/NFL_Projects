@@ -1,0 +1,39 @@
+desc,play_type,game_half,qtr,kickoff_fair_catch,kickoff_attempt,punt_returner_player_name,kickoff_returner_player_name,special_teams_play
+"(5:23) 3-J.Hekker punts 50 yards to DEN 8, Center-46-M.Cox, fair catch by 19-M.Mims.",punt,Half1,1,0.0,0.0,M.Mims,,1
+"(9:42) 3-J.Hekker punts 65 yards to DEN 18, Center-46-M.Cox. 19-M.Mims pushed ob at DEN 36 for 18 yards (3-J.Hekker).",punt,Half1,2,0.0,0.0,M.Mims,,1
+6-J.Slye kicks 66 yards from TEN 35 to DEN -1. 19-M.Mims pushed ob at DEN 27 for 28 yards (92-J.Harrell).,kickoff,Half1,2,0.0,1.0,,M.Mims,1
+"(:39) 3-J.Hekker punts 54 yards to DEN 45, Center-46-M.Cox. 19-M.Mims to TEN 38 for 17 yards (88-D.Martin-Robinson).",punt,Half1,2,0.0,0.0,M.Mims,,1
+6-J.Slye kicks 65 yards from TEN 35 to DEN 0. 19-M.Mims to DEN 23 for 23 yards (33-C.Gray).,kickoff,Half2,3,0.0,1.0,,M.Mims,1
+"6-J.Slye kicks 64 yards from TEN 35 to DEN 1. 19-M.Mims to DEN 32 for 31 yards (92-J.Harrell). PENALTY on TEN-52-J.Williams, Illegal Formation, 5 yards, enforced at DEN 32.",kickoff,Half2,3,0.0,1.0,,M.Mims,1
+"(2:34) 3-J.Hekker punts 43 yards to DEN 31, Center-46-M.Cox, fair catch by 19-M.Mims.",punt,Half2,3,0.0,0.0,M.Mims,,1
+"(11:53) 3-J.Hekker punts 46 yards to DEN 20, Center-46-M.Cox. 19-M.Mims MUFFS catch, RECOVERED by TEN-54-D.Mausi at DEN 24.",punt,Half2,4,0.0,0.0,M.Mims,,1
+"(6:48) 3-J.Hekker punts 48 yards to DEN 25, Center-46-M.Cox. 19-M.Mims to DEN 37 for 12 yards (88-D.Martin-Robinson; 92-J.Harrell).",punt,Half2,4,0.0,0.0,M.Mims,,1
+"(4:16) 3-J.Hekker punts 40 yards to DEN 6, Center-46-M.Cox, fair catch by 19-M.Mims.",punt,Half2,4,0.0,0.0,M.Mims,,1
+3-S.Shrader kicks 56 yards from IND 35 to DEN 9. 19-M.Mims to DEN 33 for 24 yards (48-J.Bachie; 95-A.Adebawore).,kickoff,Half1,2,0.0,1.0,,M.Mims,1
+3-S.Shrader kicks 58 yards from IND 35 to DEN 7. 19-M.Mims to DEN 35 for 28 yards (38-C.Lammons).,kickoff,Half2,3,0.0,1.0,,M.Mims,1
+11-C.Dicker kicks 64 yards from LAC 35 to DEN 1. 19-M.Mims to DEN 33 for 32 yards (23-T.Jefferson).,kickoff,Half1,1,0.0,1.0,,M.Mims,1
+"(7:11) 16-J.Scott punts 54 yards to DEN 7, Center-41-R.Lovato. 19-M.Mims pushed ob at DEN 39 for 32 yards (43-T.Dye).",punt,Half1,1,0.0,0.0,M.Mims,,1
+"(2:48) 16-J.Scott punts 60 yards to DEN 30, Center-41-R.Lovato. 19-M.Mims to LAC 46 for 24 yards (58-M.Wax; 28-H.Haskins).",punt,Half1,1,0.0,0.0,M.Mims,,1
+"(:11) 16-J.Scott punts 54 yards to DEN 20, Center-41-R.Lovato, fair catch by 19-M.Mims.",punt,Half1,2,0.0,0.0,M.Mims,,1
+11-C.Dicker kicks 63 yards from LAC 35 to DEN 2. 19-M.Mims to DEN 34 for 32 yards (27-R.Mickens).,kickoff,Half2,3,0.0,1.0,,M.Mims,1
+11-C.Dicker kicks 62 yards from LAC 35 to DEN 3. 19-M.Mims to DEN 34 for 31 yards (24-B.St-Juste; 58-M.Wax).,kickoff,Half2,3,0.0,1.0,,M.Mims,1
+"(2:18) 16-J.Scott punts 40 yards to DEN 41, Center-41-R.Lovato, fair catch by 19-M.Mims.",punt,Half2,3,0.0,0.0,M.Mims,,1
+11-C.Dicker kicks 62 yards from LAC 35 to DEN 3. 19-M.Mims to DEN 22 for 19 yards (36-J.Taylor; 50-C.Murphy).,kickoff,Half2,4,0.0,1.0,,M.Mims,1
+"(8:24) 8-R.Rehkow punts 69 yards to DEN 17, Center-46-W.Wagner. 19-M.Mims to DEN 30 for 13 yards (50-S.Heyward; 37-P.Jules).",punt,Half1,2,0.0,0.0,M.Mims,,1
+"(1:24) 8-R.Rehkow punts 63 yards to DEN 16, Center-46-W.Wagner. 19-M.Mims to DEN 20 for 4 yards (37-P.Jules).",punt,Half1,2,0.0,0.0,M.Mims,,1
+"(11:08) 8-R.Rehkow punts 47 yards to DEN 15, Center-46-W.Wagner, fair catch by 19-M.Mims. PENALTY on CIN-37-P.Jules, Fair Catch Interference, 0 yards, enforced at DEN 15.",punt,Half2,3,0.0,0.0,M.Mims,,1
+"(3:00) 8-R.Rehkow punts 44 yards to DEN 7, Center-46-W.Wagner, fair catch by 19-M.Mims.",punt,Half2,3,0.0,0.0,M.Mims,,1
+"(11:21) 8-R.Rehkow punts 61 yards to DEN 17, Center-46-W.Wagner. 19-M.Mims to DEN 24 for 7 yards (50-S.Heyward).",punt,Half2,4,0.0,0.0,M.Mims,,1
+"(12:22) 10-B.Mann punts 69 yards to DEN 8, Center-57-C.Adomitis. 19-M.Mims ran ob at DEN 31 for 23 yards (83-K.Granson).",punt,Half1,1,0.0,0.0,M.Mims,,1
+"(1:02) 10-B.Mann punts 45 yards to DEN 40, Center-57-C.Adomitis. 19-M.Mims to DEN 44 for 4 yards (37-T.Bigsby; 36-C.Latu).",punt,Half1,2,0.0,0.0,M.Mims,,1
+"(2:48) 10-B.Mann punts 52 yards to DEN 20, Center-57-C.Adomitis. 19-M.Mims ran ob at DEN 36 for 16 yards (29-A.Dillon).",punt,Half2,3,0.0,0.0,M.Mims,,1
+"(11:22) 10-B.Mann punts 49 yards to DEN 29, Center-57-C.Adomitis. 19-M.Mims to DEN 28 for -1 yards (36-C.Latu).",punt,Half2,4,0.0,0.0,M.Mims,,1
+6-N.Folk kicks 60 yards from NYJ 35 to DEN 5. 19-M.Mims to DEN 22 for 17 yards (37-Q.Stiggers).,kickoff,Half1,1,0.0,1.0,,M.Mims,1
+6-N.Folk kicks 61 yards from NYJ 35 to DEN 4. 19-M.Mims to DEN 38 for 34 yards (47-A.Beck).,kickoff,Half1,1,0.0,1.0,,M.Mims,1
+6-N.Folk kicks 63 yards from NYJ 35 to DEN 2. 19-M.Mims pushed ob at DEN 31 for 29 yards (45-M.Robinson).,kickoff,Half1,1,0.0,1.0,,M.Mims,1
+"(13:35) 14-A.McNamara punts 53 yards to DEN 16, Center-42-T.Hennessy. 19-M.Mims to DEN 21 for 5 yards (89-J.Ruckert; 27-M.Moore).",punt,Half1,2,0.0,0.0,M.Mims,,1
+"(7:55) 14-A.McNamara punts 53 yards to DEN 35, Center-42-T.Hennessy. 19-M.Mims to DEN 41 for 6 yards (27-M.Moore).",punt,Half1,2,0.0,0.0,M.Mims,,1
+6-N.Folk kicks 66 yards from NYJ 35 to DEN -1. 19-M.Mims to DEN 23 for 24 yards (84-S.Smartt).,kickoff,Half2,3,0.0,1.0,,M.Mims,1
+"(2:49) 14-A.McNamara punts 49 yards to DEN 18, Center-42-T.Hennessy, fair catch by 19-M.Mims.",punt,Half2,3,0.0,0.0,M.Mims,,1
+"(15:00) 14-A.McNamara punts 55 yards to DEN 25, Center-42-T.Hennessy, fair catch by 19-M.Mims.",punt,Half2,4,0.0,0.0,M.Mims,,1
+"(10:23) 14-A.McNamara punts 44 yards to DEN 26, Center-42-T.Hennessy, fair catch by 19-M.Mims.",punt,Half2,4,0.0,0.0,M.Mims,,1
