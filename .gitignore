@@ -7,3 +7,5 @@ Bo-Nix-Analysis/venv/
 .ipynb_checkpoints/
 *.html
 *.html
+.idea/
+.idea/
