@@ -1,3 +1,7 @@
+# Turning from Pet Project into Actual Analysis
+
+Currently when this was developed it was purely out of the love the game. Now I am trying to actual do some proper analysis.
+
 ```
 Current Project Structure:
 NFL-Projects/
