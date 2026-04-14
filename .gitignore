@@ -6,3 +6,4 @@ __pycache__/
 Bo-Nix-Analysis/venv/
 .ipynb_checkpoints/
 *.html
+*.html
