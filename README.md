@@ -1,3 +1,4 @@
+```
 Current Project Structure:
 NFL-Projects/
 ├── data/
@@ -11,7 +12,9 @@ NFL-Projects/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
+```
 
+```
 Future Planned Structure:
 NFL-Projects/
 ├── data/
@@ -29,3 +32,4 @@ NFL-Projects/
 ├── .gitignore              # Ignore data/raw/*.parquet
 ├── README.md
 └── requirements.txt
+```
