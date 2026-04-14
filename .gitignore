@@ -4,3 +4,5 @@ __pycache__/
 .DS_Store
 *.pyc
 Bo-Nix-Analysis/venv/
+.ipynb_checkpoints/
+*.html
