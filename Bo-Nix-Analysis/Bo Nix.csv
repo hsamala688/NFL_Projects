@@ -1,0 +1,405 @@
+pass_length,pass_location,air_yards,play_type,desc,side_of_field,yardline_100,posteam,interception,pass_touchdown,qtr,receiver_player_name,complete_pass,week
+short,left,5.0,pass,(11:58) (Shotgun) 10-B.Nix pass short left to 85-L.Krull to DEN 41 for 6 yards (37-A.Hooker).,DEN,65.0,DEN,0.0,0.0,1.0,L.Krull,1.0,1
+short,left,13.0,pass,(11:21) (Shotgun) 10-B.Nix pass short left to 11-T.Franklin pushed ob at TEN 41 for 18 yards (38-L.Sneed).,DEN,59.0,DEN,0.0,0.0,1.0,T.Franklin,1.0,1
+short,left,11.0,pass,(10:00) 10-B.Nix pass short left to 14-C.Sutton to TEN 26 for 12 yards (38-L.Sneed).,TEN,38.0,DEN,0.0,0.0,1.0,C.Sutton,1.0,1
+short,left,5.0,pass,"(9:34) (No Huddle, Shotgun) 10-B.Nix pass short left to 82-A.Trautman to TEN 21 for 5 yards (38-L.Sneed).",TEN,26.0,DEN,0.0,0.0,1.0,A.Trautman,1.0,1
+short,left,5.0,pass,(8:56) (Shotgun) 10-B.Nix pass incomplete short left to 14-C.Sutton (38-L.Sneed).,TEN,21.0,DEN,0.0,0.0,1.0,C.Sutton,0.0,1
+deep,left,21.0,pass,(8:53) (Shotgun) 10-B.Nix pass incomplete deep left to 28-T.Badie.,TEN,21.0,DEN,0.0,0.0,1.0,T.Badie,0.0,1
+short,right,-5.0,pass,(8:47) (Shotgun) 10-B.Nix pass incomplete short right to 28-T.Badie.,TEN,21.0,DEN,0.0,0.0,1.0,T.Badie,0.0,1
+short,left,4.0,pass,(8:43) (Shotgun) 10-B.Nix pass incomplete short left to 28-T.Badie [98-J.Simmons].,TEN,21.0,DEN,0.0,0.0,1.0,T.Badie,0.0,1
+short,right,-1.0,pass,(4:32) (Shotgun) 10-B.Nix pass incomplete short right.,DEN,84.0,DEN,0.0,0.0,1.0,,0.0,1
+short,middle,4.0,pass,(4:28) (Shotgun) 10-B.Nix pass short middle to 11-T.Franklin to DEN 22 for 6 yards (21-R.McCreary) [98-J.Simmons].,DEN,84.0,DEN,0.0,0.0,1.0,T.Franklin,1.0,1
+short,left,-2.0,pass,(3:53) 10-B.Nix pass short left to 12-R.Harvey to DEN 21 for -1 yards (29-J.Brownlee).,DEN,78.0,DEN,0.0,0.0,1.0,R.Harvey,1.0,1
+short,middle,4.0,pass,(3:11) (Shotgun) 10-B.Nix pass short middle to 1-E.Engram to DEN 26 for 5 yards (28-Q.Diggs).,DEN,79.0,DEN,0.0,0.0,1.0,E.Engram,1.0,1
+short,middle,4.0,pass,(2:38) (Shotgun) 10-B.Nix pass short middle to 19-M.Mims to DEN 32 for 6 yards (33-C.Gray).,DEN,74.0,DEN,0.0,0.0,1.0,M.Mims,1.0,1
+deep,left,30.0,pass,(:49) (Shotgun) 10-B.Nix pass deep left intended for 14-C.Sutton INTERCEPTED by 21-R.McCreary at TEN 46. 21-R.McCreary to TEN 46 for no gain (14-C.Sutton).,DEN,76.0,DEN,1.0,0.0,1.0,C.Sutton,0.0,1
+short,right,4.0,pass,(13:15) (Shotgun) 10-B.Nix pass short right to 11-T.Franklin to DEN 37 for 5 yards (39-D.Baker).,DEN,68.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,1
+short,left,0.0,pass,(11:52) (Shotgun) 10-B.Nix pass incomplete short left to 28-T.Badie.,DEN,61.0,DEN,0.0,0.0,2.0,T.Badie,0.0,1
+short,right,-3.0,pass,(9:29) (Shotgun) 10-B.Nix pass short right to 1-E.Engram to DEN 42 for 6 yards (33-C.Gray).,DEN,64.0,DEN,0.0,0.0,2.0,E.Engram,1.0,1
+,,,pass,"(7:10) (Shotgun) 10-B.Nix sacked at DEN 40 for -8 yards (98-J.Simmons). FUMBLES (98-J.Simmons) [98-J.Simmons], RECOVERED by TEN-69-S.Joseph at DEN 38. 69-S.Joseph to DEN 38 for no gain (69-M.McGlinchey).",DEN,52.0,DEN,0.0,0.0,2.0,,0.0,1
+short,middle,3.0,pass,(2:00) (Shotgun) 10-B.Nix pass short middle to 28-T.Badie to DEN 35 for 3 yards (21-R.McCreary).,DEN,68.0,DEN,0.0,0.0,2.0,T.Badie,1.0,1
+short,left,5.0,pass,(1:30) (Shotgun) 10-B.Nix pass incomplete short left to 1-E.Engram (37-A.Hooker).,DEN,65.0,DEN,0.0,0.0,2.0,E.Engram,0.0,1
+short,middle,-5.0,pass,(1:26) (Shotgun) 10-B.Nix pass short middle to 28-T.Badie to DEN 48 for 13 yards (21-R.McCreary; 28-Q.Diggs).,DEN,65.0,DEN,0.0,0.0,2.0,T.Badie,1.0,1
+short,right,4.0,pass,"(:59) (No Huddle, Shotgun) 10-B.Nix pass incomplete short right to 85-L.Krull.",DEN,52.0,DEN,0.0,0.0,2.0,L.Krull,0.0,1
+deep,left,22.0,pass,"(:22) (Shotgun) 10-B.Nix pass deep left to 14-C.Sutton for 22 yards, TOUCHDOWN.",TEN,22.0,DEN,0.0,1.0,2.0,C.Sutton,1.0,1
+short,right,13.0,pass,(14:16) (Shotgun) 10-B.Nix pass short right intended for 11-T.Franklin INTERCEPTED by 25-X.Woods [98-J.Simmons] at DEN 42. 25-X.Woods ran ob at DEN 26 for 16 yards (77-Q.Meinerz; 60-L.Wattenberg).,DEN,71.0,DEN,1.0,0.0,3.0,T.Franklin,0.0,1
+short,right,-3.0,pass,(11:14) (Shotgun) 10-B.Nix pass incomplete short right.,DEN,61.0,DEN,0.0,0.0,3.0,,0.0,1
+short,right,4.0,pass,"(11:12) (Shotgun) 10-B.Nix pass short right to 19-M.Mims to DEN 46 for 7 yards (29-J.Brownlee). PENALTY on TEN-29-J.Brownlee, Face Mask, 15 yards, enforced at DEN 46.",DEN,61.0,DEN,0.0,0.0,3.0,M.Mims,1.0,1
+short,left,-2.0,pass,(10:35) (Shotgun) 10-B.Nix pass short left to 27-J.Dobbins to TEN 47 for 2 yards (21-R.McCreary).,TEN,49.0,DEN,0.0,0.0,3.0,J.Dobbins,1.0,1
+short,left,6.0,pass,(9:02) (Shotgun) 10-B.Nix pass short left to 14-C.Sutton pushed ob at TEN 28 for 8 yards (29-J.Brownlee).,TEN,36.0,DEN,0.0,0.0,3.0,C.Sutton,1.0,1
+short,right,-2.0,pass,(6:23) 10-B.Nix pass short right to 5-T.Sherfield to TEN 15 for 3 yards (39-D.Baker).,TEN,18.0,DEN,0.0,0.0,3.0,T.Sherfield,1.0,1
+short,middle,5.0,pass,(5:46) (Shotgun) 10-B.Nix pass short middle to 14-C.Sutton to TEN 10 for 5 yards (50-C.Barton).,TEN,15.0,DEN,0.0,0.0,3.0,C.Sutton,1.0,1
+short,middle,-5.0,pass,(2:27) 10-B.Nix pass incomplete short middle [7-F.Oladejo].,DEN,69.0,DEN,0.0,0.0,3.0,,0.0,1
+short,right,4.0,pass,(1:42) (Shotgun) 10-B.Nix pass short right to 1-E.Engram to DEN 43 for 10 yards (7-F.Oladejo; 39-D.Baker).,DEN,67.0,DEN,0.0,0.0,3.0,E.Engram,1.0,1
+deep,left,19.0,pass,(:21) (Shotgun) 10-B.Nix pass incomplete deep left to 14-C.Sutton (29-J.Brownlee).,DEN,57.0,DEN,0.0,0.0,3.0,C.Sutton,0.0,1
+short,right,0.0,pass,(:17) (Shotgun) 10-B.Nix pass short right to 46-A.Prentice to DEN 47 for 4 yards (39-D.Baker).,DEN,57.0,DEN,0.0,0.0,3.0,A.Prentice,1.0,1
+short,left,3.0,pass,(8:24) (Shotgun) 10-B.Nix pass short left to 14-C.Sutton to TEN 19 for 6 yards (28-Q.Diggs). ** Injury Update: TEN-39-D.Baker has returned to the game.,TEN,25.0,DEN,0.0,0.0,4.0,C.Sutton,1.0,1
+short,middle,14.0,pass,(6:35) (Shotgun) 10-B.Nix pass incomplete short middle to 11-T.Franklin.,DEN,63.0,DEN,0.0,0.0,4.0,T.Franklin,0.0,1
+short,left,6.0,pass,"(5:48) (Shotgun) 10-B.Nix pass short left to 14-C.Sutton to DEN 47 for 9 yards (21-R.McCreary). Tennessee challenged the first down ruling, and the play was REVERSED. (Shotgun) 10-B.Nix pass short left to 14-C.Sutton to DEN 46 for 8 yards (21-R.McCreary).",DEN,62.0,DEN,0.0,0.0,4.0,C.Sutton,1.0,1
+short,left,-3.0,pass,"(3:26) (Shotgun) 10-B.Nix pass short left to 11-T.Franklin to DEN 33 for 15 yards (33-C.Gray). PENALTY on TEN-37-A.Hooker, Face Mask, 15 yards, enforced at DEN 33.",DEN,82.0,DEN,0.0,0.0,4.0,T.Franklin,1.0,1
+short,right,-1.0,pass,"(3:13) 10-B.Nix pass short right to 27-J.Dobbins to TEN 41 for 8 yards (50-C.Barton). PENALTY on DEN-5-T.Sherfield, Offensive Holding, 10 yards, enforced at TEN 46.",TEN,49.0,DEN,0.0,0.0,4.0,J.Dobbins,1.0,1
+short,right,-3.0,pass,"(2:58) (Shotgun) 10-B.Nix pass short right to 19-M.Mims to DEN 47 for -1 yards (50-C.Barton). PENALTY on TEN-98-J.Simmons, Unnecessary Roughness, 15 yards, enforced at DEN 47.",DEN,52.0,DEN,0.0,0.0,4.0,M.Mims,1.0,1
+deep,right,30.0,pass,(1:05) 63-A.Palczewski reported in as eligible. 10-B.Nix pass incomplete deep right to 19-M.Mims.,TEN,36.0,DEN,0.0,0.0,4.0,M.Mims,0.0,1
+short,middle,1.0,pass,(9:53) 10-B.Nix pass short middle to 82-A.Trautman to IND 35 for 1 yard (48-J.Bachie).,IND,36.0,DEN,0.0,0.0,1.0,A.Trautman,1.0,2
+short,left,5.0,pass,"(9:13) (No Huddle, Shotgun) 10-B.Nix pass short left to 13-P.Bryant to IND 23 for 12 yards (44-Z.Franklin).",IND,35.0,DEN,0.0,0.0,1.0,P.Bryant,1.0,2
+deep,left,23.0,pass,"(8:30) (Shotgun) 10-B.Nix pass deep left to 19-M.Mims for 23 yards, TOUCHDOWN.",IND,23.0,DEN,0.0,1.0,1.0,M.Mims,1.0,2
+deep,right,19.0,pass,(2:56) (Shotgun) 10-B.Nix pass incomplete deep right to 14-C.Sutton.,DEN,58.0,DEN,0.0,0.0,1.0,C.Sutton,0.0,2
+short,left,-3.0,pass,(14:05) (Shotgun) 10-B.Nix pass short left to 11-T.Franklin to DEN 30 for -3 yards (23-K.Moore).,DEN,67.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,2
+deep,left,37.0,pass,"(13:39) (No Huddle, Shotgun) 10-B.Nix pass deep left to 11-T.Franklin ran ob at IND 28 for 42 yards.",DEN,70.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,2
+short,right,4.0,pass,(12:29) 10-B.Nix pass short right to 82-A.Trautman to IND 18 for 7 yards (29-M.Blackmon).,IND,25.0,DEN,0.0,0.0,2.0,A.Trautman,1.0,2
+short,left,8.0,pass,(11:50) (Shotgun) 10-B.Nix pass short left to 11-T.Franklin to IND 2 for 16 yards (0-C.Bynum).,IND,18.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,2
+short,right,2.0,pass,"(10:46) 10-B.Nix pass short right to 11-T.Franklin for 3 yards, TOUCHDOWN.",IND,3.0,DEN,0.0,1.0,2.0,T.Franklin,1.0,2
+short,middle,3.0,pass,"(7:04) (No Huddle, Shotgun) 10-B.Nix pass short middle to 5-T.Sherfield to IND 36 for 3 yards (48-J.Bachie).",IND,39.0,DEN,0.0,0.0,2.0,T.Sherfield,1.0,2
+short,left,3.0,pass,"(5:49) (Shotgun) 10-B.Nix pass short left to 13-P.Bryant to IND 29 for 6 yards (20-N.Cross; 4-X.Howard). Indianapolis challenged the first down ruling, and the play was Upheld. The ruling on the field stands. (Timeout #1.)",IND,35.0,DEN,0.0,0.0,2.0,P.Bryant,1.0,2
+short,left,-1.0,pass,(5:19) (Shotgun) 10-B.Nix pass short left to 11-T.Franklin to IND 26 for 3 yards (20-N.Cross; 4-X.Howard).,IND,29.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,2
+short,right,0.0,pass,(4:45) (Shotgun) 10-B.Nix pass incomplete short right to 27-J.Dobbins (44-Z.Franklin).,IND,26.0,DEN,0.0,0.0,2.0,J.Dobbins,0.0,2
+short,right,3.0,pass,(3:52) (Shotgun) 10-B.Nix pass incomplete short right to 14-C.Sutton.,IND,3.0,DEN,0.0,0.0,2.0,C.Sutton,0.0,2
+short,right,2.0,pass,"(3:06) (Shotgun) 63-A.Palczewski reported in as eligible. 10-B.Nix pass short right to 82-A.Trautman for 2 yards, TOUCHDOWN.",IND,2.0,DEN,0.0,1.0,2.0,A.Trautman,1.0,2
+short,middle,3.0,pass,(1:25) (Shotgun) 10-B.Nix pass short middle to 11-T.Franklin to DEN 36 for 4 yards (20-N.Cross).,DEN,68.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,2
+short,left,-6.0,pass,"(1:00) (No Huddle, Shotgun) 10-B.Nix pass short left to 28-T.Badie to DEN 36 for no gain (44-Z.Franklin).",DEN,64.0,DEN,0.0,0.0,2.0,T.Badie,1.0,2
+deep,middle,18.0,pass,"(:33) (No Huddle, Shotgun) 10-B.Nix pass incomplete deep middle to 11-T.Franklin.",DEN,64.0,DEN,0.0,0.0,2.0,T.Franklin,0.0,2
+short,right,-5.0,pass,(14:18) (Shotgun) 10-B.Nix pass short right to 19-M.Mims to DEN 46 for 1 yard (20-N.Cross).,DEN,55.0,DEN,0.0,0.0,3.0,M.Mims,1.0,2
+short,left,6.0,pass,"(13:13) (No Huddle, Shotgun) 10-B.Nix pass short left to 14-C.Sutton to IND 30 for 6 yards (4-X.Howard).",IND,36.0,DEN,0.0,0.0,3.0,C.Sutton,1.0,2
+short,middle,4.0,pass,(12:35) (Shotgun) 10-B.Nix pass short middle to 12-R.Harvey to IND 14 for 16 yards (0-C.Bynum; 44-Z.Franklin).,IND,30.0,DEN,0.0,0.0,3.0,R.Harvey,1.0,2
+short,left,-1.0,pass,"(12:01) (No Huddle, Shotgun) 10-B.Nix pass short left to 11-T.Franklin to IND 5 for 9 yards (44-Z.Franklin).",IND,14.0,DEN,0.0,0.0,3.0,T.Franklin,1.0,2
+short,right,1.0,pass,(5:36) (Shotgun) 10-B.Nix pass incomplete short right to 12-R.Harvey.,DEN,65.0,DEN,0.0,0.0,3.0,R.Harvey,0.0,2
+short,right,-4.0,pass,(4:34) (Shotgun) 10-B.Nix pass short right to 28-T.Badie pushed ob at DEN 49 for 19 yards (29-M.Blackmon).,DEN,70.0,DEN,0.0,0.0,3.0,T.Badie,1.0,2
+short,right,4.0,pass,(2:54) (Shotgun) 10-B.Nix pass incomplete short right to 1-E.Engram (20-N.Cross).,IND,45.0,DEN,0.0,0.0,3.0,E.Engram,0.0,2
+short,left,0.0,pass,(12:55) 10-B.Nix pass short left to 27-J.Dobbins pushed ob at IND 26 for 9 yards (48-J.Bachie).,IND,35.0,DEN,0.0,0.0,4.0,J.Dobbins,1.0,2
+deep,right,19.0,pass,(11:33) (Shotgun) 10-B.Nix pass deep right intended for 14-C.Sutton INTERCEPTED by 0-C.Bynum at IND 9. 0-C.Bynum to IND 9 for no gain (14-C.Sutton).,IND,28.0,DEN,1.0,0.0,4.0,C.Sutton,0.0,2
+short,left,5.0,pass,(5:39) (Shotgun) 10-B.Nix pass short left to 1-E.Engram to IND 43 for 12 yards (23-K.Moore; 44-Z.Franklin).,DEN,55.0,DEN,0.0,0.0,4.0,E.Engram,1.0,2
+short,left,0.0,pass,(3:59) (Shotgun) 10-B.Nix pass incomplete short left to 13-P.Bryant (94-T.Lewis).,IND,39.0,DEN,0.0,0.0,4.0,P.Bryant,0.0,2
+short,right,-3.0,pass,(3:55) (Shotgun) 10-B.Nix pass short right to 11-T.Franklin to IND 24 for 15 yards (99-D.Buckner).,IND,39.0,DEN,0.0,0.0,4.0,T.Franklin,1.0,2
+short,right,-3.0,pass,(11:49) (Shotgun) 10-B.Nix pass short right to 12-R.Harvey to DEN 36 for 3 yards (48-B.Dupree).,DEN,67.0,DEN,0.0,0.0,1.0,R.Harvey,1.0,3
+short,middle,5.0,pass,"(10:26) (No Huddle, Shotgun) 10-B.Nix pass incomplete short middle to 85-L.Krull.",DEN,60.0,DEN,0.0,0.0,1.0,L.Krull,0.0,3
+short,right,6.0,pass,(5:47) (Shotgun) 10-B.Nix pass incomplete short right.,DEN,71.0,DEN,0.0,0.0,1.0,,0.0,3
+short,right,-5.0,pass,(5:40) (Shotgun) 10-B.Nix pass short right to 12-R.Harvey to DEN 38 for 9 yards (3-D.James).,DEN,71.0,DEN,0.0,0.0,1.0,R.Harvey,1.0,3
+short,left,-7.0,pass,(1:56) 10-B.Nix pass incomplete short left to 27-J.Dobbins.,LAC,48.0,DEN,0.0,0.0,1.0,J.Dobbins,0.0,3
+deep,left,17.0,pass,(1:52) (Shotgun) 10-B.Nix pass incomplete deep left to 14-C.Sutton (24-B.St-Juste).,LAC,48.0,DEN,0.0,0.0,1.0,C.Sutton,0.0,3
+short,right,13.0,pass,(10:23) 10-B.Nix pass short right to 14-C.Sutton to DEN 22 for 13 yards (29-T.Still).,DEN,91.0,DEN,0.0,0.0,2.0,C.Sutton,1.0,3
+deep,middle,18.0,pass,(8:19) (Shotgun) 10-B.Nix pass deep middle to 14-C.Sutton to DEN 46 for 19 yards (23-T.Jefferson).,DEN,73.0,DEN,0.0,0.0,2.0,C.Sutton,1.0,3
+,,,pass,(7:38) (Shotgun) 10-B.Nix sacked at DEN 40 for -6 yards (3-D.James).,DEN,54.0,DEN,0.0,0.0,2.0,,0.0,3
+deep,right,47.0,pass,(6:13) (Shotgun) 10-B.Nix pass incomplete deep right to 19-M.Mims [91-D.Hand].,DEN,63.0,DEN,0.0,0.0,2.0,M.Mims,0.0,3
+short,left,7.0,pass,(1:46) (Shotgun) 10-B.Nix pass short left to 14-C.Sutton to DEN 36 for 8 yards (3-D.James).,DEN,72.0,DEN,0.0,0.0,2.0,C.Sutton,1.0,3
+short,middle,14.0,pass,"(1:26) (No Huddle, Shotgun) 10-B.Nix pass incomplete short middle to 11-T.Franklin (91-D.Hand).",DEN,64.0,DEN,0.0,0.0,2.0,T.Franklin,0.0,3
+short,right,4.0,pass,(1:22) (Shotgun) 10-B.Nix pass short right to 14-C.Sutton to DEN 40 for 4 yards (26-D.Jackson).,DEN,64.0,DEN,0.0,0.0,2.0,C.Sutton,1.0,3
+short,left,15.0,pass,"(1:02) (No Huddle, Shotgun) 10-B.Nix pass incomplete short left to 19-M.Mims.",DEN,60.0,DEN,0.0,0.0,2.0,M.Mims,0.0,3
+deep,right,25.0,pass,(:58) (Shotgun) 10-B.Nix pass incomplete deep right [29-T.Still].,DEN,60.0,DEN,0.0,0.0,2.0,,0.0,3
+deep,left,34.0,pass,"(:46) (Shotgun) 10-B.Nix pass deep left to 14-C.Sutton for 52 yards, TOUCHDOWN.",DEN,52.0,DEN,0.0,1.0,2.0,C.Sutton,1.0,3
+deep,right,28.0,pass,"(12:47) (No Huddle, Shotgun) 10-B.Nix pass incomplete deep right to 19-M.Mims [92-J.Eboigbe].",LAC,28.0,DEN,0.0,0.0,3.0,M.Mims,0.0,3
+short,left,-2.0,pass,(12:41) (Shotgun) 10-B.Nix pass short left to 19-M.Mims pushed ob at LAC 24 for 4 yards (50-C.Murphy).,LAC,28.0,DEN,0.0,0.0,3.0,M.Mims,1.0,3
+short,left,-4.0,pass,(5:29) 10-B.Nix pass short left to 11-T.Franklin to DEN 35 for 1 yard (43-T.Dye; 3-D.James).,DEN,66.0,DEN,0.0,0.0,3.0,T.Franklin,1.0,3
+short,middle,2.0,pass,(4:30) (Shotgun) 10-B.Nix pass short middle to 12-R.Harvey to DEN 35 for 2 yards (29-T.Still).,DEN,67.0,DEN,0.0,0.0,3.0,R.Harvey,1.0,3
+short,middle,6.0,pass,(15:00) (Shotgun) 10-B.Nix pass short middle to 85-L.Krull to LAC 32 for 9 yards (23-T.Jefferson; 3-D.James). (Virtual Measurement).,LAC,41.0,DEN,0.0,0.0,4.0,L.Krull,1.0,3
+short,middle,8.0,pass,"(14:21) 10-B.Nix pass short middle to 14-C.Sutton to LAC 10 for 22 yards (32-A.Gilman). PENALTY on LAC-32-A.Gilman, Face Mask, 5 yards, enforced at LAC 10.",LAC,32.0,DEN,0.0,0.0,4.0,C.Sutton,1.0,3
+short,right,5.0,pass,(12:28) (Shotgun) 10-B.Nix pass incomplete short right to 11-T.Franklin (23-T.Jefferson).,LAC,8.0,DEN,0.0,0.0,4.0,T.Franklin,0.0,3
+short,left,-3.0,pass,(6:42) (Shotgun) 10-B.Nix pass short left to 11-T.Franklin to DEN 17 for 7 yards (32-A.Gilman).,DEN,90.0,DEN,0.0,0.0,4.0,T.Franklin,1.0,3
+,,,pass,(2:31) (Shotgun) 10-B.Nix sacked ob at DEN 22 for 0 yards (43-T.Dye).,DEN,78.0,DEN,0.0,0.0,4.0,,0.0,3
+short,right,-6.0,pass,(2:25) (Shotgun) 10-B.Nix pass short right to 27-J.Dobbins to DEN 22 for no gain (23-T.Jefferson).,DEN,78.0,DEN,0.0,0.0,4.0,J.Dobbins,1.0,3
+deep,left,45.0,pass,(2:00) (Shotgun) 10-B.Nix pass incomplete deep left to 14-C.Sutton.,DEN,78.0,DEN,0.0,0.0,4.0,C.Sutton,0.0,3
+short,right,5.0,pass,(8:23) (Shotgun) 10-B.Nix pass short right to 19-M.Mims to DEN 38 for 5 yards (23-D.Hill).,DEN,67.0,DEN,0.0,0.0,1.0,M.Mims,1.0,4
+deep,right,16.0,pass,(3:49) 10-B.Nix pass incomplete deep right to 11-T.Franklin.,DEN,61.0,DEN,0.0,0.0,1.0,T.Franklin,0.0,4
+short,middle,3.0,pass,(3:43) (Shotgun) 10-B.Nix pass short middle to 14-C.Sutton to CIN 49 for 12 yards (28-J.Newton).,DEN,61.0,DEN,0.0,0.0,1.0,C.Sutton,1.0,4
+short,right,6.0,pass,(3:05) 10-B.Nix pass short right to 82-A.Trautman pushed ob at CIN 23 for 26 yards (44-D.Knight).,CIN,49.0,DEN,0.0,0.0,1.0,A.Trautman,1.0,4
+short,right,6.0,pass,(:27) (Shotgun) 10-B.Nix pass incomplete short right to 13-P.Bryant.,CIN,6.0,DEN,0.0,0.0,1.0,P.Bryant,0.0,4
+short,left,-5.0,pass,(11:52) (Shotgun) 10-B.Nix pass short left to 19-M.Mims pushed ob at DEN 31 for 11 yards (22-G.Stone; 20-D.Turner).,DEN,80.0,DEN,0.0,0.0,2.0,M.Mims,1.0,4
+short,right,4.0,pass,"(11:20) (No Huddle, Shotgun) 10-B.Nix pass incomplete short right to 82-A.Trautman.",DEN,69.0,DEN,0.0,0.0,2.0,A.Trautman,0.0,4
+short,left,1.0,pass,(11:15) (Shotgun) 10-B.Nix pass short left to 82-A.Trautman pushed ob at DEN 37 for 6 yards (29-C.Taylor-Britt).,DEN,69.0,DEN,0.0,0.0,2.0,A.Trautman,1.0,4
+short,left,7.0,pass,"(10:39) (Shotgun) 10-B.Nix pass short left to 14-C.Sutton pushed ob at CIN 44 for 19 yards (22-G.Stone). Penalty on CIN-99-M.Murphy, Defensive Offside, declined.",DEN,63.0,DEN,0.0,0.0,2.0,C.Sutton,1.0,4
+short,left,14.0,pass,(10:08) (Shotgun) 10-B.Nix pass incomplete short left to 12-R.Harvey.,CIN,44.0,DEN,0.0,0.0,2.0,R.Harvey,0.0,4
+short,left,4.0,pass,(9:24) (Shotgun) 10-B.Nix pass short left to 14-C.Sutton to CIN 16 for 22 yards (44-D.Knight). CIN-44-D.Knight was injured during the play.,CIN,38.0,DEN,0.0,0.0,2.0,C.Sutton,1.0,4
+short,right,-4.0,pass,"(8:11) (Shotgun) 10-B.Nix pass short right to 45-N.Adkins to DEN 28 for -2 yards (92-B.Hill). ** Injury Update: CIN-44-D.Knight has returned to the game. Penalty on DEN-60-L.Wattenberg, Ineligible Downfield Pass, declined.",DEN,70.0,DEN,0.0,0.0,2.0,N.Adkins,1.0,4
+deep,middle,19.0,pass,(5:03) (Shotgun) 10-B.Nix pass deep middle to 11-T.Franklin to CIN 24 for 23 yards (55-L.Wilson).,CIN,47.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,4
+short,left,-2.0,pass,"(4:06) (No Huddle, Shotgun) 10-B.Nix pass short left to 11-T.Franklin to CIN 11 for 6 yards (20-D.Turner, 22-G.Stone).",CIN,17.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,4
+short,left,5.0,pass,(3:26) 10-B.Nix pass incomplete short left to 1-E.Engram.,CIN,11.0,DEN,0.0,0.0,2.0,E.Engram,0.0,4
+short,right,3.0,pass,(3:20) (Shotgun) 10-B.Nix pass short right to 1-E.Engram pushed ob at CIN 2 for 9 yards (44-D.Knight; 27-J.Battle).,CIN,11.0,DEN,0.0,0.0,2.0,E.Engram,1.0,4
+short,right,2.0,pass,"(2:04) 10-B.Nix pass short right intended for 11-T.Franklin INTERCEPTED by 44-D.Knight at CIN -5. Touchback. The Replay Official reviewed the interception ruling, and the play was Upheld. The ruling on the field stands.",CIN,2.0,DEN,1.0,0.0,2.0,T.Franklin,0.0,4
+short,middle,2.0,pass,(1:09) (Shotgun) 10-B.Nix pass short middle to 1-E.Engram to DEN 22 for 2 yards (28-J.Newton).,DEN,80.0,DEN,0.0,0.0,2.0,E.Engram,1.0,4
+short,right,11.0,pass,"(:49) (No Huddle, Shotgun) 10-B.Nix pass short right to 11-T.Franklin to DEN 33 for 11 yards (20-D.Turner). Penalty on CIN-44-D.Knight, Defensive Holding, declined.",DEN,78.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,4
+short,left,2.0,pass,(:42) (Shotgun) 10-B.Nix pass incomplete short left to 1-E.Engram.,DEN,67.0,DEN,0.0,0.0,2.0,E.Engram,0.0,4
+deep,right,27.0,pass,(:38) (Shotgun) 10-B.Nix pass incomplete deep right to 11-T.Franklin.,DEN,67.0,DEN,0.0,0.0,2.0,T.Franklin,0.0,4
+deep,left,26.0,pass,(:33) (Shotgun) 10-B.Nix pass deep left to 19-M.Mims to CIN 39 for 28 yards (22-G.Stone).,DEN,67.0,DEN,0.0,0.0,2.0,M.Mims,1.0,4
+short,right,4.0,pass,(:26) (Shotgun) 10-B.Nix pass short right to 28-T.Badie pushed ob at CIN 28 for 11 yards (23-D.Hill) [96-C.Sample].,CIN,39.0,DEN,0.0,0.0,2.0,T.Badie,1.0,4
+short,middle,4.0,pass,(:21) (Shotgun) 10-B.Nix pass incomplete short middle to 28-T.Badie.,CIN,28.0,DEN,0.0,0.0,2.0,T.Badie,0.0,4
+short,left,5.0,pass,"(:17) (Shotgun) 10-B.Nix pass short left to 14-C.Sutton to CIN 20 for 8 yards (44-D.Knight). Penalty on CIN-58-J.Ossai, Defensive Offside, declined.",CIN,28.0,DEN,0.0,0.0,2.0,C.Sutton,1.0,4
+deep,right,20.0,pass,"(:13) (Shotgun) 10-B.Nix pass deep right to 14-C.Sutton for 20 yards, TOUCHDOWN.",CIN,20.0,DEN,0.0,1.0,2.0,C.Sutton,1.0,4
+short,left,-5.0,pass,(14:54) (Shotgun) 10-B.Nix pass short left to 19-M.Mims to DEN 38 for 8 yards (23-D.Hill).,DEN,70.0,DEN,0.0,0.0,3.0,M.Mims,1.0,4
+short,right,-1.0,pass,(13:36) (Shotgun) 10-B.Nix pass incomplete short right to 45-N.Adkins (23-D.Hill).,DEN,57.0,DEN,0.0,0.0,3.0,N.Adkins,0.0,4
+deep,left,48.0,pass,(12:52) (Shotgun) 10-B.Nix pass incomplete deep left to 1-E.Engram.,DEN,56.0,DEN,0.0,0.0,3.0,E.Engram,0.0,4
+short,middle,10.0,pass,"(9:36) (Shotgun) 10-B.Nix pass incomplete short middle to 14-C.Sutton. Penalty on DEN-13-P.Bryant, Offensive Offside, declined.",DEN,70.0,DEN,0.0,0.0,3.0,C.Sutton,0.0,4
+short,left,-1.0,pass,(9:32) (Shotgun) 10-B.Nix pass short left to 12-R.Harvey to DEN 44 for 14 yards (91-T.Hendrickson; 23-D.Hill).,DEN,70.0,DEN,0.0,0.0,3.0,R.Harvey,1.0,4
+short,right,-3.0,pass,(8:18) (Shotgun) 10-B.Nix pass short right to 27-J.Dobbins to DEN 33 for 4 yards (23-D.Hill; 55-L.Wilson).,DEN,71.0,DEN,0.0,0.0,3.0,J.Dobbins,1.0,4
+short,right,-4.0,pass,"(7:34) (Shotgun) 10-B.Nix pass short right to 1-E.Engram to DEN 40 for 7 yards (90-K.Jenkins; 27-J.Battle). Penalty on DEN-60-L.Wattenberg, Ineligible Downfield Pass, declined.",DEN,67.0,DEN,0.0,0.0,3.0,E.Engram,1.0,4
+short,left,-2.0,pass,(7:07) (Shotgun) 10-B.Nix pass short left to 19-M.Mims to DEN 45 for 5 yards (22-G.Stone).,DEN,60.0,DEN,0.0,0.0,3.0,M.Mims,1.0,4
+short,right,2.0,pass,(2:13) 10-B.Nix pass short right to 45-N.Adkins to DEN 17 for 7 yards (23-D.Hill).,DEN,90.0,DEN,0.0,0.0,3.0,N.Adkins,1.0,4
+short,left,-1.0,pass,(1:32) (Shotgun) 10-B.Nix pass short left to 11-T.Franklin to DEN 32 for 15 yards (49-B.Carter).,DEN,83.0,DEN,0.0,0.0,3.0,T.Franklin,1.0,4
+short,left,4.0,pass,(:06) 10-B.Nix pass short left to 12-R.Harvey pushed ob at DEN 43 for 10 yards (28-J.Newton).,DEN,67.0,DEN,0.0,0.0,3.0,R.Harvey,1.0,4
+deep,middle,42.0,pass,(14:27) (Shotgun) 10-B.Nix pass incomplete deep middle to 11-T.Franklin.,DEN,71.0,DEN,0.0,0.0,4.0,T.Franklin,0.0,4
+short,left,-4.0,pass,(14:21) (Shotgun) 10-B.Nix pass short left to 12-R.Harvey to DEN 33 for 4 yards (44-D.Knight).,DEN,71.0,DEN,0.0,0.0,4.0,R.Harvey,1.0,4
+short,middle,6.0,pass,(13:37) (Shotgun) 10-B.Nix pass short middle to 1-E.Engram to DEN 44 for 11 yards (27-J.Battle).,DEN,67.0,DEN,0.0,0.0,4.0,E.Engram,1.0,4
+short,right,2.0,pass,(9:09) (Shotgun) 10-B.Nix pass short right to 19-M.Mims to CIN 44 for 12 yards (28-J.Newton; 55-L.Wilson).,DEN,56.0,DEN,0.0,0.0,4.0,M.Mims,1.0,4
+short,left,2.0,pass,"(5:02) (Shotgun) 10-B.Nix pass short left to 12-R.Harvey for 12 yards, TOUCHDOWN.",CIN,12.0,DEN,0.0,1.0,4.0,R.Harvey,1.0,4
+deep,right,32.0,pass,(13:35) (Shotgun) 10-B.Nix pass incomplete deep right to 14-C.Sutton.,DEN,63.0,DEN,0.0,0.0,1.0,C.Sutton,0.0,5
+short,right,4.0,pass,(10:51) (Shotgun) 10-B.Nix pass short right to 19-M.Mims to DEN 46 for 4 yards (27-Q.Mitchell).,DEN,58.0,DEN,0.0,0.0,1.0,M.Mims,1.0,5
+short,right,1.0,pass,(10:15) 10-B.Nix pass incomplete short right to 45-N.Adkins.,DEN,54.0,DEN,0.0,0.0,1.0,N.Adkins,0.0,5
+short,right,7.0,pass,"(10:10) (No Huddle, Shotgun) 10-B.Nix pass short right to 14-C.Sutton to PHI 47 for 7 yards (27-Q.Mitchell; 30-J.Campbell).",DEN,54.0,DEN,0.0,0.0,1.0,C.Sutton,1.0,5
+short,left,3.0,pass,"(8:30) (No Huddle, Shotgun) 10-B.Nix pass short left to 14-C.Sutton to PHI 39 for 4 yards (30-J.Campbell; 27-Q.Mitchell).",PHI,43.0,DEN,0.0,0.0,1.0,C.Sutton,1.0,5
+short,left,-5.0,pass,"(7:01) (Shotgun) 10-B.Nix sacked at PHI 46 for -9 yards (33-C.DeJean). FUMBLES (33-C.DeJean), RECOVERED by PHI-58-J.Hunt at PHI 39. The Replay Official reviewed the fumble ruling, and the play was REVERSED. (Shotgun) 10-B.Nix pass incomplete short left to 11-T.Franklin (33-C.DeJean).",PHI,37.0,DEN,0.0,0.0,1.0,T.Franklin,0.0,5
+deep,middle,18.0,pass,(6:57) (Shotgun) 10-B.Nix pass incomplete deep middle to 1-E.Engram [98-J.Carter].,PHI,37.0,DEN,0.0,0.0,1.0,E.Engram,0.0,5
+deep,right,19.0,pass,(:20) 10-B.Nix pass deep right to 11-T.Franklin pushed ob at DEN 49 for 20 yards (7-K.Ringo) [52-Z.Smith].,DEN,71.0,DEN,0.0,0.0,1.0,T.Franklin,1.0,5
+short,left,-3.0,pass,(15:00) (Shotgun) 10-B.Nix pass short left to 27-J.Dobbins pushed ob at PHI 46 for 5 yards (53-Z.Baun).,DEN,51.0,DEN,0.0,0.0,2.0,J.Dobbins,1.0,5
+deep,left,32.0,pass,(12:44) (Shotgun) 10-B.Nix pass incomplete deep left to 5-T.Sherfield [0-J.Uche].,PHI,34.0,DEN,0.0,0.0,2.0,T.Sherfield,0.0,5
+,,,pass,"(12:38) (No Huddle, Shotgun) 10-B.Nix sacked at PHI 47 for -13 yards (52-Z.Smith).",PHI,34.0,DEN,0.0,0.0,2.0,,0.0,5
+short,left,6.0,pass,(7:15) (Shotgun) 10-B.Nix pass short left to 5-T.Sherfield to DEN 34 for 15 yards (7-K.Ringo).,DEN,81.0,DEN,0.0,0.0,2.0,T.Sherfield,1.0,5
+short,right,6.0,pass,(6:39) (Shotgun) 10-B.Nix pass short right to 12-R.Harvey to DEN 40 for 6 yards (7-K.Ringo).,DEN,66.0,DEN,0.0,0.0,2.0,R.Harvey,1.0,5
+short,middle,-4.0,pass,"(5:03) (No Huddle, Shotgun) 10-B.Nix pass incomplete short middle to 1-E.Engram [13-A.Ojulari].",DEN,64.0,DEN,0.0,0.0,2.0,E.Engram,0.0,5
+short,left,-4.0,pass,(2:18) (Shotgun) 10-B.Nix pass incomplete short left.,DEN,80.0,DEN,0.0,0.0,2.0,,0.0,5
+short,right,-6.0,pass,(2:12) (Shotgun) 10-B.Nix pass short right to 28-T.Badie to DEN 36 for 16 yards (32-R.Blankenship).,DEN,80.0,DEN,0.0,0.0,2.0,T.Badie,1.0,5
+short,right,-1.0,pass,(2:00) (Shotgun) 10-B.Nix pass short right to 11-T.Franklin to DEN 41 for 5 yards (30-J.Campbell; 52-Z.Smith).,DEN,64.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,5
+short,middle,4.0,pass,"(1:36) (No Huddle, Shotgun) 10-B.Nix pass incomplete short middle to 28-T.Badie.",DEN,59.0,DEN,0.0,0.0,2.0,T.Badie,0.0,5
+deep,left,44.0,pass,(1:32) (Shotgun) 10-B.Nix pass incomplete deep left to 11-T.Franklin.,DEN,59.0,DEN,0.0,0.0,2.0,T.Franklin,0.0,5
+short,right,-4.0,pass,(:52) (Shotgun) 10-B.Nix pass short right to 1-E.Engram to DEN 41 for -3 yards (33-C.DeJean).,DEN,56.0,DEN,0.0,0.0,2.0,E.Engram,1.0,5
+short,left,10.0,pass,"(:28) (No Huddle, Shotgun) 10-B.Nix pass incomplete short left to 14-C.Sutton (27-Q.Mitchell).",DEN,59.0,DEN,0.0,0.0,2.0,C.Sutton,0.0,5
+deep,right,49.0,pass,(:21) (Shotgun) 10-B.Nix pass incomplete deep right to 19-M.Mims.,DEN,59.0,DEN,0.0,0.0,2.0,M.Mims,0.0,5
+short,right,2.0,pass,(12:35) (Shotgun) 10-B.Nix pass short right to 12-R.Harvey pushed ob at DEN 27 for 11 yards (30-J.Campbell).,DEN,84.0,DEN,0.0,0.0,3.0,R.Harvey,1.0,5
+short,right,-5.0,pass,"(8:21) (Shotgun) 10-B.Nix pass incomplete short right [53-Z.Baun]. PENALTY on DEN-10-B.Nix, Intentional Grounding, 13 yards, enforced at PHI 35.",PHI,35.0,DEN,0.0,0.0,3.0,,0.0,5
+short,right,3.0,pass,(8:16) (Shotgun) 10-B.Nix pass short right to 19-M.Mims to PHI 42 for 6 yards (53-Z.Baun).,PHI,48.0,DEN,0.0,0.0,3.0,M.Mims,1.0,5
+short,right,2.0,pass,(3:56) (Shotgun) 10-B.Nix pass incomplete short right to 19-M.Mims.,DEN,72.0,DEN,0.0,0.0,3.0,M.Mims,0.0,5
+short,right,0.0,pass,(2:38) (Shotgun) 10-B.Nix pass short right to 1-E.Engram pushed ob at DEN 43 for 7 yards (30-J.Campbell).,DEN,64.0,DEN,0.0,0.0,3.0,E.Engram,1.0,5
+deep,right,27.0,pass,(1:29) (Shotgun) 10-B.Nix pass incomplete deep right to 19-M.Mims.,DEN,52.0,DEN,0.0,0.0,3.0,M.Mims,0.0,5
+short,right,6.0,pass,"(:44) (No Huddle, Shotgun) 10-B.Nix pass short right to 14-C.Sutton to PHI 38 for 6 yards (27-Q.Mitchell).",PHI,44.0,DEN,0.0,0.0,3.0,C.Sutton,1.0,5
+short,left,5.0,pass,(:07) (Shotgun) 10-B.Nix pass short left to 14-C.Sutton to PHI 32 for 6 yards (33-C.DeJean).,PHI,38.0,DEN,0.0,0.0,3.0,C.Sutton,1.0,5
+short,left,9.0,pass,(14:23) (Shotgun) 10-B.Nix pass short left to 11-T.Franklin ran ob at PHI 9 for 10 yards (24-A.Mukuba).,PHI,19.0,DEN,0.0,0.0,4.0,T.Franklin,1.0,5
+deep,left,16.0,pass,(11:08) (Shotgun) 10-B.Nix pass deep left to 1-E.Engram to DEN 46 for 18 yards (7-K.Ringo). ** Injury Update: DEN-69-M.McGlinchey has returned to the game.,DEN,72.0,DEN,0.0,0.0,4.0,E.Engram,1.0,5
+short,left,11.0,pass,"(10:36) (No Huddle, Shotgun) 10-B.Nix pass short left to 14-C.Sutton to PHI 40 for 14 yards (27-Q.Mitchell).",DEN,54.0,DEN,0.0,0.0,4.0,C.Sutton,1.0,5
+short,right,15.0,pass,(8:17) (Shotgun) 10-B.Nix pass short right to 14-C.Sutton to PHI 11 for 34 yards (53-Z.Baun).,PHI,45.0,DEN,0.0,0.0,4.0,C.Sutton,1.0,5
+short,middle,3.0,pass,"(7:43) (No Huddle) 10-B.Nix pass short middle to 1-E.Engram for 11 yards, TOUCHDOWN.",PHI,11.0,DEN,0.0,1.0,4.0,E.Engram,1.0,5
+,,,pass,TWO-POINT CONVERSION ATTEMPT. 10-B.Nix pass to 11-T.Franklin is complete. ATTEMPT SUCCEEDS.,PHI,2.0,DEN,0.0,0.0,4.0,T.Franklin,0.0,5
+short,left,3.0,pass,(5:00) 10-B.Nix pass short left to 82-A.Trautman to DEN 43 for 11 yards (53-Z.Baun; 33-C.DeJean).,DEN,68.0,DEN,0.0,0.0,4.0,A.Trautman,1.0,5
+short,right,-3.0,pass,(3:34) 10-B.Nix pass incomplete short right [58-J.Hunt].,DEN,53.0,DEN,0.0,0.0,4.0,,0.0,5
+short,right,13.0,pass,(3:28) (Shotgun) 10-B.Nix pass short right to 14-C.Sutton to PHI 37 for 16 yards (27-Q.Mitchell).,DEN,53.0,DEN,0.0,0.0,4.0,C.Sutton,1.0,5
+short,middle,5.0,pass,(2:34) (Shotgun) 10-B.Nix pass short middle to 14-C.Sutton to PHI 29 for 12 yards (53-Z.Baun).,PHI,41.0,DEN,0.0,0.0,4.0,C.Sutton,1.0,5
+short,right,-2.0,pass,"(2:27) 10-B.Nix pass short right to 12-R.Harvey to PHI 28 for 1 yard (24-A.Mukuba). PENALTY on PHI-53-Z.Baun, Unnecessary Roughness, 14 yards, enforced at PHI 28.",PHI,29.0,DEN,0.0,0.0,4.0,R.Harvey,1.0,5
+,,,pass,(2:00) (Shotgun) 63-A.Palczewski reported in as eligible. 10-B.Nix sacked at PHI 13 for -1 yards (53-Z.Baun).,PHI,12.0,DEN,0.0,0.0,4.0,,0.0,5
+short,right,5.0,pass,"(13:38) (Shotgun) 10-B.Nix pass short right to 11-T.Franklin to DEN 32 for 7 yards (29-J.Brownlee) [44-J.Sherwood]. FUMBLES (29-J.Brownlee), RECOVERED by NYJ-8-A.Cisco at DEN 37.",DEN,75.0,DEN,0.0,0.0,1.0,T.Franklin,1.0,6
+short,left,5.0,pass,(10:54) (Shotgun) 10-B.Nix pass short left to 45-N.Adkins to DEN 45 for 7 yards (44-J.Sherwood).,DEN,62.0,DEN,0.0,0.0,1.0,N.Adkins,1.0,6
+short,right,2.0,pass,(10:19) 10-B.Nix pass incomplete short right [9-W.McDonald].,DEN,55.0,DEN,0.0,0.0,1.0,,0.0,6
+short,left,5.0,pass,(10:13) (Shotgun) 10-B.Nix pass short left to 13-P.Bryant to NYJ 44 for 11 yards (8-A.Cisco).,DEN,55.0,DEN,0.0,0.0,1.0,P.Bryant,1.0,6
+short,right,-2.0,pass,"(9:18) (Shotgun) 10-B.Nix pass short right to 1-E.Engram to 50 for -1 yards (29-J.Brownlee, 51-F.Mauigoa).",NYJ,49.0,DEN,0.0,0.0,1.0,E.Engram,1.0,6
+short,right,4.0,pass,(8:01) (Shotgun) 10-B.Nix pass short right to 12-R.Harvey to NYJ 39 for 9 yards (95-Q.Williams; 26-I.Oliver).,NYJ,48.0,DEN,0.0,0.0,1.0,R.Harvey,1.0,6
+short,right,15.0,pass,(4:50) (Shotgun) 10-B.Nix pass short right to 14-C.Sutton to DEN 48 for 17 yards (1-A.Gardner).,DEN,69.0,DEN,0.0,0.0,1.0,C.Sutton,1.0,6
+short,right,-6.0,pass,(3:06) (Shotgun) 10-B.Nix pass short right to 12-R.Harvey to DEN 42 for 4 yards (44-J.Sherwood; 51-F.Mauigoa).,DEN,62.0,DEN,0.0,0.0,1.0,R.Harvey,1.0,6
+short,right,5.0,pass,(1:42) (Shotgun) 10-B.Nix pass short right to 1-E.Engram pushed ob at NYJ 36 for 11 yards (44-J.Sherwood).,NYJ,47.0,DEN,0.0,0.0,1.0,E.Engram,1.0,6
+short,right,6.0,pass,(1:06) 63-A.Palczewski reported in as eligible. 10-B.Nix pass incomplete short right to 14-C.Sutton (1-A.Gardner).,NYJ,36.0,DEN,0.0,0.0,1.0,C.Sutton,0.0,6
+short,left,-4.0,pass,(1:03) (Shotgun) 10-B.Nix pass short left to 19-M.Mims pushed ob at NYJ 32 for 4 yards (1-A.Gardner).,NYJ,36.0,DEN,0.0,0.0,1.0,M.Mims,1.0,6
+short,left,12.0,pass,"(:36) (No Huddle, Shotgun) 10-B.Nix pass short left to 1-E.Engram to NYJ 16 for 16 yards (44-J.Sherwood).",NYJ,32.0,DEN,0.0,0.0,1.0,E.Engram,1.0,6
+short,right,12.0,pass,"(:02) (No Huddle, Shotgun) 10-B.Nix pass short right to 45-N.Adkins for 16 yards, TOUCHDOWN.",NYJ,16.0,DEN,0.0,1.0,1.0,N.Adkins,1.0,6
+deep,middle,61.0,pass,(13:24) 10-B.Nix pass incomplete deep middle to 19-M.Mims.,DEN,79.0,DEN,0.0,0.0,2.0,M.Mims,0.0,6
+short,left,3.0,pass,"(12:41) (No Huddle, Shotgun) 10-B.Nix pass short left to 1-E.Engram to DEN 32 for 4 yards (8-A.Cisco).",DEN,72.0,DEN,0.0,0.0,2.0,E.Engram,1.0,6
+short,left,0.0,pass,(11:23) (Shotgun) 10-B.Nix pass short left to 11-T.Franklin to DEN 40 for 7 yards (9-W.McDonald). NYJ-78-J.Tufele was injured during the play.,DEN,67.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,6
+short,middle,14.0,pass,(9:36) (Shotgun) 63-A.Palczewski reported in as eligible. 10-B.Nix pass incomplete short middle to 11-T.Franklin.,NYJ,49.0,DEN,0.0,0.0,2.0,T.Franklin,0.0,6
+short,right,-4.0,pass,(9:32) (Shotgun) 10-B.Nix pass incomplete short right to 27-J.Dobbins.,NYJ,49.0,DEN,0.0,0.0,2.0,J.Dobbins,0.0,6
+short,right,1.0,pass,(7:45) 10-B.Nix pass short right to 11-T.Franklin pushed ob at DEN 46 for 5 yards (29-J.Brownlee).,DEN,59.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,6
+short,right,-6.0,pass,(4:17) (Shotgun) 10-B.Nix pass short right to 12-R.Harvey to NYJ 45 for 8 yards (27-M.Moore; 26-I.Oliver).,DEN,53.0,DEN,0.0,0.0,2.0,R.Harvey,1.0,6
+short,right,-5.0,pass,"(9:04) 10-B.Nix pass incomplete short right to 38-J.McLaughlin. Penalty on DEN-77-Q.Meinerz, Ineligible Downfield Pass, declined.",DEN,71.0,DEN,0.0,0.0,3.0,J.McLaughlin,0.0,6
+short,middle,7.0,pass,(2:41) (Shotgun) 10-B.Nix pass incomplete short middle.,DEN,82.0,DEN,0.0,0.0,3.0,,0.0,6
+short,middle,1.0,pass,"(13:46) (No Huddle, Shotgun) 10-B.Nix pass incomplete short middle to 1-E.Engram (44-J.Sherwood).",DEN,71.0,DEN,0.0,0.0,4.0,E.Engram,0.0,6
+short,right,4.0,pass,(10:16) (Shotgun) 10-B.Nix pass incomplete short right.,DEN,74.0,DEN,0.0,0.0,4.0,,0.0,6
+short,left,11.0,pass,(10:09) (Shotgun) 63-A.Palczewski reported in as eligible. 10-B.Nix pass short left to 1-E.Engram to DEN 38 for 12 yards (8-A.Cisco).,DEN,74.0,DEN,0.0,0.0,4.0,E.Engram,1.0,6
+short,right,-5.0,pass,(8:55) (Shotgun) 10-B.Nix pass short right to 12-R.Harvey to DEN 40 for no gain (21-B.Stephens; 44-J.Sherwood).,DEN,60.0,DEN,0.0,0.0,4.0,R.Harvey,1.0,6
+short,left,2.0,pass,(8:15) (Shotgun) 10-B.Nix pass short left to 19-M.Mims pushed ob at NYJ 34 for 26 yards (8-A.Cisco).,DEN,60.0,DEN,0.0,0.0,4.0,M.Mims,1.0,6
+short,right,5.0,pass,"(6:43) (No Huddle, Shotgun) 10-B.Nix pass short right to 13-P.Bryant to NYJ 9 for 11 yards (26-I.Oliver).",NYJ,20.0,DEN,0.0,0.0,4.0,P.Bryant,1.0,6
+short,left,-4.0,pass,(6:03) 63-A.Palczewski reported in as eligible. 10-B.Nix pass incomplete short left.,NYJ,9.0,DEN,0.0,0.0,4.0,,0.0,6
+short,left,9.0,pass,(5:14) (Shotgun) 10-B.Nix pass incomplete short left to 14-C.Sutton.,NYJ,9.0,DEN,0.0,0.0,4.0,C.Sutton,0.0,6
+,,,pass,(3:19) (Shotgun) 10-B.Nix sacked at DEN 11 for -6 yards (11-J.Johnson).,DEN,83.0,DEN,0.0,0.0,4.0,,0.0,6
+short,left,5.0,pass,(12:45) (Shotgun) 10-B.Nix pass incomplete short left to 13-P.Bryant.,DEN,80.0,DEN,0.0,0.0,1.0,P.Bryant,0.0,7
+short,left,9.0,pass,(12:42) (Shotgun) 10-B.Nix pass incomplete short left to 14-C.Sutton.,DEN,80.0,DEN,0.0,0.0,1.0,C.Sutton,0.0,7
+deep,right,43.0,pass,(12:38) (Shotgun) 10-B.Nix pass incomplete deep right to 11-T.Franklin.,DEN,80.0,DEN,0.0,0.0,1.0,T.Franklin,0.0,7
+short,right,1.0,pass,(11:08) (Shotgun) 10-B.Nix pass incomplete short right to 1-E.Engram.,DEN,85.0,DEN,0.0,0.0,1.0,E.Engram,0.0,7
+short,left,9.0,pass,(9:18) (Shotgun) 10-B.Nix pass short left to 14-C.Sutton to DEN 36 for 9 yards (21-P.Adebo).,DEN,73.0,DEN,0.0,0.0,1.0,C.Sutton,1.0,7
+short,right,-5.0,pass,(6:13) (Shotgun) 10-B.Nix pass short right to 19-M.Mims ran ob at DEN 19 for 13 yards (27-T.Nubin).,DEN,94.0,DEN,0.0,0.0,1.0,M.Mims,1.0,7
+,,,pass,(3:31) (Shotgun) 10-B.Nix sacked at DEN 24 for -8 yards (0-B.Burns).,DEN,68.0,DEN,0.0,0.0,1.0,,0.0,7
+short,left,-4.0,pass,(2:49) (Shotgun) 10-B.Nix pass short left to 19-M.Mims to DEN 24 for no gain (22-A.Phillips).,DEN,76.0,DEN,0.0,0.0,1.0,M.Mims,1.0,7
+deep,right,40.0,pass,(2:12) (Shotgun) 10-B.Nix pass incomplete deep right to 11-T.Franklin.,DEN,76.0,DEN,0.0,0.0,1.0,T.Franklin,0.0,7
+short,left,3.0,pass,(1:00) (Shotgun) 10-B.Nix pass short left to 45-N.Adkins pushed ob at DEN 37 for 5 yards (21-P.Adebo).,DEN,68.0,DEN,0.0,0.0,1.0,N.Adkins,1.0,7
+short,left,4.0,pass,(15:00) (Shotgun) 10-B.Nix pass incomplete short left to 14-C.Sutton (97-D.Lawrence).,DEN,64.0,DEN,0.0,0.0,2.0,C.Sutton,0.0,7
+short,middle,4.0,pass,(8:10) (Shotgun) 10-B.Nix pass short middle to 45-N.Adkins to NYG 49 for 15 yards (53-D.Muasau). NYG-8-J.Holland was injured during the play.,DEN,64.0,DEN,0.0,0.0,2.0,N.Adkins,1.0,7
+short,middle,5.0,pass,(7:41) (Shotgun) 10-B.Nix pass short middle to 13-P.Bryant to NYG 43 for 6 yards (22-A.Phillips).,NYG,49.0,DEN,0.0,0.0,2.0,P.Bryant,1.0,7
+short,right,0.0,pass,(6:44) (Shotgun) 10-B.Nix pass incomplete short right to 45-N.Adkins.,NYG,42.0,DEN,0.0,0.0,2.0,N.Adkins,0.0,7
+deep,middle,38.0,pass,(5:58) (Shotgun) 10-B.Nix pass incomplete deep middle to 19-M.Mims (28-C.Flott) [95-R.Robertson-Harris].,NYG,39.0,DEN,0.0,0.0,2.0,M.Mims,0.0,7
+deep,right,17.0,pass,(5:13) (Shotgun) 10-B.Nix pass deep right to 14-C.Sutton to NYG 5 for 32 yards (24-D.Belton; 28-C.Flott).,NYG,37.0,DEN,0.0,0.0,2.0,C.Sutton,1.0,7
+short,left,2.0,pass,(3:49) 72-G.Bolles reported in as eligible. 10-B.Nix pass incomplete short left to 72-G.Bolles (52-V.Dimukeje) [95-R.Robertson-Harris].,NYG,2.0,DEN,0.0,0.0,2.0,G.Bolles,0.0,7
+short,right,2.0,pass,(3:44) (Shotgun) 10-B.Nix pass incomplete short right to 11-T.Franklin. ** Injury Update: NYG-51-A.Carter has returned to the game.,NYG,2.0,DEN,0.0,0.0,2.0,T.Franklin,0.0,7
+short,right,-3.0,pass,(3:39) (Shotgun) 10-B.Nix pass short right to 14-C.Sutton to NYG 1 for 1 yard (24-D.Belton).,NYG,2.0,DEN,0.0,0.0,2.0,C.Sutton,1.0,7
+short,left,1.0,pass,(1:04) (Shotgun) 10-B.Nix pass short left to 1-E.Engram to DEN 25 for 1 yard (27-T.Nubin). ** Injury Update: NYG-8-J.Holland has returned to the game.,DEN,76.0,DEN,0.0,0.0,2.0,E.Engram,1.0,7
+,,,pass,(:31) (Shotgun) 10-B.Nix sacked at DEN 14 for -6 yards (0-B.Burns).,DEN,80.0,DEN,0.0,0.0,2.0,,0.0,7
+short,right,7.0,pass,(14:20) (Shotgun) 10-B.Nix pass short right to 14-C.Sutton to DEN 37 for 7 yards (21-P.Adebo).,DEN,70.0,DEN,0.0,0.0,3.0,C.Sutton,1.0,7
+deep,left,18.0,pass,"(13:44) (No Huddle, Shotgun) 10-B.Nix pass incomplete deep left to 11-T.Franklin (28-C.Flott).",DEN,63.0,DEN,0.0,0.0,3.0,T.Franklin,0.0,7
+deep,right,42.0,pass,"(12:57) (No Huddle, Shotgun) 10-B.Nix pass incomplete deep right to 11-T.Franklin.",DEN,58.0,DEN,0.0,0.0,3.0,T.Franklin,0.0,7
+short,left,6.0,pass,(6:22) (Shotgun) 10-B.Nix pass incomplete short left to 13-P.Bryant (93-R.Nunez-Roches).,DEN,89.0,DEN,0.0,0.0,3.0,P.Bryant,0.0,7
+short,left,4.0,pass,"(6:19) (No Huddle, Shotgun) 10-B.Nix pass incomplete short left to 1-E.Engram.",DEN,89.0,DEN,0.0,0.0,3.0,E.Engram,0.0,7
+deep,left,17.0,pass,"(1:25) (No Huddle, Shotgun) 10-B.Nix pass deep left to 14-C.Sutton pushed ob at NYG 48 for 16 yards (2-D.Banks).",DEN,64.0,DEN,0.0,0.0,3.0,C.Sutton,1.0,7
+short,right,12.0,pass,(15:00) (Shotgun) 10-B.Nix pass short right to 11-T.Franklin pushed ob at NYG 2 for 12 yards (28-C.Flott).,NYG,14.0,DEN,0.0,0.0,4.0,T.Franklin,1.0,7
+short,right,-6.0,pass,(14:17) 10-B.Nix pass incomplete short right to 46-A.Prentice (95-R.Robertson-Harris).,NYG,2.0,DEN,0.0,0.0,4.0,A.Prentice,0.0,7
+short,right,2.0,pass,"(14:14) 10-B.Nix pass short right to 11-T.Franklin for 2 yards, TOUCHDOWN.",NYG,2.0,DEN,0.0,1.0,4.0,T.Franklin,1.0,7
+,,,pass,TWO-POINT CONVERSION ATTEMPT. 10-B.Nix pass to 14-C.Sutton is complete. ATTEMPT SUCCEEDS.,NYG,2.0,DEN,0.0,0.0,4.0,C.Sutton,0.0,7
+short,right,2.0,pass,(9:37) (Shotgun) 10-B.Nix pass short right to 1-E.Engram pushed ob at DEN 37 for 4 yards (24-D.Belton).,DEN,67.0,DEN,0.0,0.0,4.0,E.Engram,1.0,7
+short,right,4.0,pass,(9:05) (Shotgun) 10-B.Nix pass short right to 19-M.Mims to DEN 42 for 5 yards (24-D.Belton).,DEN,63.0,DEN,0.0,0.0,4.0,M.Mims,1.0,7
+short,right,8.0,pass,"(8:40) (No Huddle, Shotgun) 10-B.Nix pass incomplete short right to 14-C.Sutton.",DEN,58.0,DEN,0.0,0.0,4.0,C.Sutton,0.0,7
+short,right,-6.0,pass,(8:36) (Shotgun) 10-B.Nix pass short right to 28-T.Badie to DEN 49 for 7 yards (58-B.Okereke).,DEN,58.0,DEN,0.0,0.0,4.0,T.Badie,1.0,7
+short,middle,1.0,pass,(7:47) (Shotgun) 10-B.Nix pass short middle to 1-E.Engram pushed ob at DEN 47 for 8 yards (22-A.Phillips).,DEN,61.0,DEN,0.0,0.0,4.0,E.Engram,1.0,7
+short,right,-6.0,pass,"(7:15) (No Huddle, Shotgun) 10-B.Nix pass incomplete short right to 1-E.Engram (0-B.Burns).",DEN,53.0,DEN,0.0,0.0,4.0,E.Engram,0.0,7
+short,middle,0.0,pass,(7:12) (Shotgun) 10-B.Nix pass short middle to 1-E.Engram pushed ob at NYG 44 for 9 yards (22-A.Phillips). NYG-0-B.Burns was injured during the play.,DEN,53.0,DEN,0.0,0.0,4.0,E.Engram,1.0,7
+deep,right,19.0,pass,(5:52) (Shotgun) 10-B.Nix pass incomplete deep right to 14-C.Sutton. ** Injury Update: NYG-0-B.Burns has returned to the game.,NYG,19.0,DEN,0.0,0.0,4.0,C.Sutton,0.0,7
+short,right,-6.0,pass,(5:47) (Shotgun) 10-B.Nix pass short right to 28-T.Badie to NYG 7 for 12 yards (53-D.Muasau; 24-D.Belton).,NYG,19.0,DEN,0.0,0.0,4.0,T.Badie,1.0,7
+short,left,2.0,pass,(5:21) (Shotgun) 10-B.Nix pass incomplete short left to 13-P.Bryant (91-D.Alexander).,NYG,7.0,DEN,0.0,0.0,4.0,P.Bryant,0.0,7
+,,,pass,TWO-POINT CONVERSION ATTEMPT. 10-B.Nix pass to 11-T.Franklin is complete. ATTEMPT SUCCEEDS.,NYG,2.0,DEN,0.0,0.0,4.0,T.Franklin,0.0,7
+deep,right,17.0,pass,(4:47) (Shotgun) 10-B.Nix pass incomplete deep right to 12-R.Harvey [97-D.Lawrence]. DEN-69-M.McGlinchey was injured during the play.,NYG,19.0,DEN,0.0,0.0,4.0,R.Harvey,0.0,7
+short,middle,4.0,pass,(4:42) (Shotgun) 10-B.Nix pass short middle to 11-T.Franklin to NYG 14 for 5 yards (58-B.Okereke; 53-D.Muasau).,NYG,19.0,DEN,0.0,0.0,4.0,T.Franklin,1.0,7
+short,right,2.0,pass,"(4:15) (No Huddle, Shotgun) 10-B.Nix pass short right to 19-M.Mims to NYG 2 for 7 yards (28-C.Flott; 58-B.Okereke).",NYG,9.0,DEN,0.0,0.0,4.0,M.Mims,1.0,7
+short,right,1.0,pass,"(3:55) (No Huddle) 10-B.Nix pass short right to 12-R.Harvey for 2 yards, TOUCHDOWN.",NYG,2.0,DEN,0.0,1.0,4.0,R.Harvey,1.0,7
+short,left,-5.0,pass,(2:42) (Shotgun) 10-B.Nix pass short left to 27-J.Dobbins to DEN 31 for -1 yards (0-B.Burns). ** Injury Update: DEN-69-M.McGlinchey has returned to the game.,DEN,68.0,DEN,0.0,0.0,4.0,J.Dobbins,1.0,7
+short,middle,3.0,pass,"(2:17) (No Huddle, Shotgun) 10-B.Nix pass incomplete short middle to 11-T.Franklin.",DEN,69.0,DEN,0.0,0.0,4.0,T.Franklin,0.0,7
+deep,right,28.0,pass,(2:14) (Shotgun) 10-B.Nix pass deep right to 19-M.Mims pushed ob at NYG 38 for 31 yards (22-A.Phillips).,DEN,69.0,DEN,0.0,0.0,4.0,M.Mims,1.0,7
+short,left,6.0,pass,(2:06) (Shotgun) 10-B.Nix pass incomplete short left to 11-T.Franklin.,NYG,38.0,DEN,0.0,0.0,4.0,T.Franklin,0.0,7
+short,left,-2.0,pass,"(2:04) (No Huddle, Shotgun) 10-B.Nix pass short left to 1-E.Engram to NYG 18 for 20 yards (24-D.Belton).",NYG,38.0,DEN,0.0,0.0,4.0,E.Engram,1.0,7
+deep,middle,29.0,pass,(:33) (Shotgun) 10-B.Nix pass deep middle to 19-M.Mims to NYG 48 for 29 yards (22-A.Phillips).,DEN,77.0,DEN,0.0,0.0,4.0,M.Mims,1.0,7
+deep,left,20.0,pass,(:18) (Shotgun) 10-B.Nix pass deep left to 14-C.Sutton to NYG 21 for 22 yards (2-D.Banks).,NYG,43.0,DEN,0.0,0.0,4.0,C.Sutton,1.0,7
+short,right,6.0,pass,(14:18) (Shotgun) 10-B.Nix pass short right to 1-E.Engram to DEN 46 for 11 yards (59-K.Murray; 50-S.James).,DEN,65.0,DEN,0.0,0.0,1.0,E.Engram,1.0,8
+short,right,13.0,pass,"(13:44) (Shotgun) 10-B.Nix pass short right intended for 13-P.Bryant INTERCEPTED by 25-T.Bridges at DAL 41. 25-T.Bridges to DAL 48 for 7 yards (13-P.Bryant). Penalty on DEN-63-A.Palczewski, Ineligible Downfield Pass, declined.",DEN,54.0,DEN,1.0,0.0,1.0,P.Bryant,0.0,8
+short,middle,10.0,pass,(9:07) (Shotgun) 10-B.Nix pass short middle to 11-T.Franklin to DAL 40 for 26 yards (38-A.Clark).,DEN,66.0,DEN,0.0,0.0,1.0,T.Franklin,1.0,8
+deep,right,40.0,pass,(8:27) 10-B.Nix pass incomplete deep right to 11-T.Franklin.,DAL,40.0,DEN,0.0,0.0,1.0,T.Franklin,0.0,8
+short,right,14.0,pass,(5:43) (Shotgun) 10-B.Nix pass short right to 13-P.Bryant pushed ob at DAL 46 for 16 yards (20-K.Elam; 38-A.Clark).,DEN,62.0,DEN,0.0,0.0,1.0,P.Bryant,1.0,8
+short,right,-1.0,pass,(4:31) (Shotgun) 10-B.Nix pass short right to 11-T.Franklin pushed ob at DAL 15 for 10 yards (38-A.Clark).,DAL,25.0,DEN,0.0,0.0,1.0,T.Franklin,1.0,8
+deep,middle,25.0,pass,"(3:10) (Shotgun) 10-B.Nix pass deep middle to 11-T.Franklin for 25 yards, TOUCHDOWN.",DAL,25.0,DEN,0.0,1.0,1.0,T.Franklin,1.0,8
+short,right,15.0,pass,(14:06) (Shotgun) 10-B.Nix pass incomplete short right to 14-C.Sutton.,DEN,88.0,DEN,0.0,0.0,2.0,C.Sutton,0.0,8
+deep,right,17.0,pass,"(13:59) (No Huddle, Shotgun) 10-B.Nix pass incomplete deep right to 11-T.Franklin (25-T.Bridges).",DEN,88.0,DEN,0.0,0.0,2.0,T.Franklin,0.0,8
+short,left,13.0,pass,"(6:48) 10-B.Nix pass short left to 11-T.Franklin pushed ob at DAL 45 for 13 yards (20-K.Elam). Penalty on DAL-14-M.Bell, Defensive Holding, declined.",DEN,58.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,8
+short,right,0.0,pass,(6:18) (Shotgun) 10-B.Nix pass short right to 1-E.Engram to DAL 2 for 11 yards (59-K.Murray; 35-M.Liufau).,DAL,13.0,DEN,0.0,0.0,2.0,E.Engram,1.0,8
+,,,pass,"TWO-POINT CONVERSION ATTEMPT. 10-B.Nix pass to 1-E.Engram is incomplete. ATTEMPT FAILS. Penalty on DEN-72-G.Bolles, Ineligible Downfield Pass, declined.",DAL,1.0,DEN,0.0,0.0,2.0,E.Engram,0.0,8
+short,left,-1.0,pass,(2:14) (Shotgun) 10-B.Nix pass short left to 27-J.Dobbins pushed ob at DEN 32 for 4 yards (25-T.Bridges).,DEN,72.0,DEN,0.0,0.0,2.0,J.Dobbins,1.0,8
+short,left,4.0,pass,"(1:28) (No Huddle, Shotgun) 10-B.Nix pass short left to 14-C.Sutton to DAL 42 for 11 yards (25-T.Bridges).",DEN,53.0,DEN,0.0,0.0,2.0,C.Sutton,1.0,8
+short,middle,1.0,pass,"(1:02) (No Huddle, Shotgun) 10-B.Nix pass short middle to 27-J.Dobbins pushed ob at DAL 36 for 6 yards (26-D.Bland).",DAL,42.0,DEN,0.0,0.0,2.0,J.Dobbins,1.0,8
+short,right,3.0,pass,(:54) (Shotgun) 10-B.Nix pass short right to 1-E.Engram pushed ob at DAL 32 for 4 yards (14-M.Bell).,DAL,36.0,DEN,0.0,0.0,2.0,E.Engram,1.0,8
+short,left,-2.0,pass,(:50) (Shotgun) 10-B.Nix pass short left to 11-T.Franklin to DAL 24 for 8 yards (26-D.Bland).,DAL,32.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,8
+deep,left,24.0,pass,"(:44) (Shotgun) 10-B.Nix pass deep left to 13-P.Bryant for 24 yards, TOUCHDOWN. Penalty on DAL-97-O.Odighizuwa, Defensive Offside, declined.",DAL,24.0,DEN,0.0,1.0,2.0,P.Bryant,1.0,8
+deep,left,24.0,pass,(6:10) (Shotgun) 10-B.Nix pass incomplete deep left to 14-C.Sutton.,DAL,24.0,DEN,0.0,0.0,3.0,C.Sutton,0.0,8
+short,left,7.0,pass,(2:37) (Shotgun) 10-B.Nix pass short left to 14-C.Sutton to DEN 26 for 9 yards (25-T.Bridges).,DEN,83.0,DEN,0.0,0.0,3.0,C.Sutton,1.0,8
+deep,left,37.0,pass,(15:00) (Shotgun) 10-B.Nix pass deep left to 14-C.Sutton to DAL 21 for 39 yards (27-R.Steward) [41-D.Ezeiruaku].,DEN,60.0,DEN,0.0,0.0,4.0,C.Sutton,1.0,8
+short,right,5.0,pass,"(14:26) (No Huddle, Shotgun) 10-B.Nix pass incomplete short right to 19-M.Mims.",DAL,21.0,DEN,0.0,0.0,4.0,M.Mims,0.0,8
+short,left,9.0,pass,(14:21) (Shotgun) 10-B.Nix pass incomplete short left to 13-P.Bryant.,DAL,21.0,DEN,0.0,0.0,4.0,P.Bryant,0.0,8
+short,middle,10.0,pass,(14:19) (Shotgun) 10-B.Nix pass short middle to 1-E.Engram to DAL 11 for 10 yards (59-K.Murray).,DAL,21.0,DEN,0.0,0.0,4.0,E.Engram,1.0,8
+short,right,7.0,pass,"(12:58) 76-C.Throckmorton reported in as eligible. 10-B.Nix pass incomplete short right to 45-N.Adkins. Penalty on DEN, Illegal Formation, declined.",DAL,7.0,DEN,0.0,0.0,4.0,N.Adkins,0.0,8
+short,left,7.0,pass,"(12:54) (Shotgun) 10-B.Nix pass short left to 11-T.Franklin for 7 yards, TOUCHDOWN.",DAL,7.0,DEN,0.0,1.0,4.0,T.Franklin,1.0,8
+short,right,8.0,pass,(8:09) (Shotgun) 10-B.Nix pass short right to 14-C.Sutton to DAL 22 for 8 yards (25-T.Bridges).,DAL,30.0,DEN,0.0,0.0,4.0,C.Sutton,1.0,8
+short,right,-2.0,pass,(7:28) (Shotgun) 10-B.Nix pass incomplete short right.,DAL,5.0,DEN,0.0,0.0,4.0,,0.0,8
+short,right,5.0,pass,"(7:23) (Shotgun) 10-B.Nix pass incomplete short right. Penalty on DEN-14-C.Sutton, Offensive Pass Interference, declined. Penalty on DEN-77-Q.Meinerz, Ineligible Downfield Pass, declined.",DAL,5.0,DEN,0.0,0.0,4.0,,0.0,8
+short,right,1.0,pass,"(7:18) (Shotgun) 10-B.Nix pass short right to 12-R.Harvey for 5 yards, TOUCHDOWN.",DAL,5.0,DEN,0.0,1.0,4.0,R.Harvey,1.0,8
+short,left,6.0,pass,(7:24) (Shotgun) 10-B.Nix pass incomplete short left to 14-C.Sutton.,DEN,59.0,DEN,0.0,0.0,1.0,C.Sutton,0.0,9
+deep,left,24.0,pass,(5:24) (Shotgun) 10-B.Nix pass incomplete deep left to 11-T.Franklin.,HOU,35.0,DEN,0.0,0.0,1.0,T.Franklin,0.0,9
+short,middle,2.0,pass,(4:39) (Shotgun) 10-B.Nix pass incomplete short middle to 28-T.Badie.,HOU,33.0,DEN,0.0,0.0,1.0,T.Badie,0.0,9
+deep,left,31.0,pass,(15:00) 10-B.Nix pass incomplete deep left to 11-T.Franklin (4-K.Lassiter).,DEN,65.0,DEN,0.0,0.0,2.0,T.Franklin,0.0,9
+short,left,-2.0,pass,(14:54) (Shotgun) 10-B.Nix pass incomplete short left to 11-T.Franklin (55-D.Hunter).,DEN,65.0,DEN,0.0,0.0,2.0,T.Franklin,0.0,9
+short,left,-2.0,pass,(13:26) (Shotgun) 10-B.Nix pass short left to 11-T.Franklin to DEN 17 for 3 yards (0-A.Al-Shaair).,DEN,86.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,9
+deep,left,34.0,pass,(12:43) (Shotgun) 10-B.Nix pass deep left intended for 14-C.Sutton INTERCEPTED by 2-C.Bullock [55-D.Hunter] at HOU 49. 2-C.Bullock ran ob at HOU 49 for no gain.,DEN,83.0,DEN,1.0,0.0,2.0,C.Sutton,0.0,9
+short,middle,6.0,pass,(7:06) (Shotgun) 10-B.Nix pass short middle to 82-A.Trautman to HOU 49 for 21 yards (4-K.Lassiter; 5-J.Pitre).,DEN,70.0,DEN,0.0,0.0,2.0,A.Trautman,1.0,9
+short,middle,2.0,pass,"(6:36) (No Huddle, Shotgun) 10-B.Nix pass incomplete short middle.",HOU,49.0,DEN,0.0,0.0,2.0,,0.0,9
+short,left,5.0,pass,(5:47) (Shotgun) 10-B.Nix pass short left to 83-M.Bandy pushed ob at HOU 30 for 16 yards (4-K.Lassiter).,HOU,46.0,DEN,0.0,0.0,2.0,M.Bandy,1.0,9
+deep,right,30.0,pass,(5:10) 10-B.Nix pass incomplete deep right to 11-T.Franklin (24-D.Stingley).,HOU,30.0,DEN,0.0,0.0,2.0,T.Franklin,0.0,9
+deep,left,20.0,pass,(5:03) (Shotgun) 10-B.Nix pass incomplete deep left to 1-E.Engram.,HOU,30.0,DEN,0.0,0.0,2.0,E.Engram,0.0,9
+deep,left,27.0,pass,"(4:58) (Shotgun) 10-B.Nix pass deep left to 14-C.Sutton for 30 yards, TOUCHDOWN [55-D.Hunter].",HOU,30.0,DEN,0.0,1.0,2.0,C.Sutton,1.0,9
+short,left,3.0,pass,(1:52) (Shotgun) 10-B.Nix pass short left to 28-T.Badie to DEN 32 for 12 yards (39-H.To'oTo'o; 24-D.Stingley).,DEN,80.0,DEN,0.0,0.0,2.0,T.Badie,1.0,9
+deep,right,31.0,pass,"(1:29) (No Huddle, Shotgun) 10-B.Nix pass incomplete deep right to 11-T.Franklin.",DEN,68.0,DEN,0.0,0.0,2.0,T.Franklin,0.0,9
+short,left,-7.0,pass,(1:23) (Shotgun) 10-B.Nix pass short left to 28-T.Badie to DEN 26 for -6 yards (39-H.To'oTo'o).,DEN,68.0,DEN,0.0,0.0,2.0,T.Badie,1.0,9
+deep,right,58.0,pass,(1:19) (Shotgun) 10-B.Nix pass incomplete deep right to 11-T.Franklin (4-K.Lassiter).,DEN,74.0,DEN,0.0,0.0,2.0,T.Franklin,0.0,9
+,,,pass,(13:42) (Shotgun) 10-B.Nix sacked at DEN 33 for -2 yards (51-W.Anderson).,DEN,65.0,DEN,0.0,0.0,3.0,,0.0,9
+short,right,12.0,pass,(12:29) (Shotgun) 10-B.Nix pass incomplete short right to 14-C.Sutton.,DEN,63.0,DEN,0.0,0.0,3.0,C.Sutton,0.0,9
+short,right,0.0,pass,(7:50) (Shotgun) 10-B.Nix pass short right to 12-R.Harvey to DEN 31 for 5 yards (5-J.Pitre).,DEN,74.0,DEN,0.0,0.0,3.0,R.Harvey,1.0,9
+short,left,15.0,pass,(1:19) 10-B.Nix pass short left to 11-T.Franklin to HOU 48 for 13 yards (4-K.Lassiter) [51-W.Anderson].,DEN,61.0,DEN,0.0,0.0,3.0,T.Franklin,1.0,9
+short,right,3.0,pass,(:41) (Shotgun) 10-B.Nix pass short right to 11-T.Franklin to HOU 45 for 3 yards (4-K.Lassiter).,HOU,48.0,DEN,0.0,0.0,3.0,T.Franklin,1.0,9
+short,right,10.0,pass,(15:00) (Shotgun) 10-B.Nix pass incomplete short right.,HOU,45.0,DEN,0.0,0.0,4.0,,0.0,9
+short,left,5.0,pass,(14:55) (Shotgun) 10-B.Nix pass short left to 13-P.Bryant to HOU 38 for 7 yards (22-J.Smith).,HOU,45.0,DEN,0.0,0.0,4.0,P.Bryant,1.0,9
+short,left,7.0,pass,"(14:30) (No Huddle, Shotgun) 10-B.Nix pass short left to 11-T.Franklin pushed ob at HOU 30 for 8 yards (4-K.Lassiter).",HOU,38.0,DEN,0.0,0.0,4.0,T.Franklin,1.0,9
+deep,right,24.0,pass,"(12:34) (Shotgun) 10-B.Nix pass deep right to 12-R.Harvey for 27 yards, TOUCHDOWN.",HOU,27.0,DEN,0.0,1.0,4.0,R.Harvey,1.0,9
+,,,pass,TWO-POINT CONVERSION ATTEMPT. 10-B.Nix pass to 11-T.Franklin is complete. ATTEMPT SUCCEEDS.,HOU,2.0,DEN,0.0,0.0,4.0,T.Franklin,0.0,9
+deep,middle,39.0,pass,(10:09) (Shotgun) 10-B.Nix pass incomplete deep middle to 13-P.Bryant (24-D.Stingley).,DEN,78.0,DEN,0.0,0.0,4.0,P.Bryant,0.0,9
+short,left,3.0,pass,(10:02) (Shotgun) 10-B.Nix pass incomplete short left to 1-E.Engram.,DEN,78.0,DEN,0.0,0.0,4.0,E.Engram,0.0,9
+short,right,1.0,pass,(7:12) (Shotgun) 10-B.Nix pass short right to 82-A.Trautman to DEN 24 for 4 yards (5-J.Pitre; 0-A.Al-Shaair).,DEN,80.0,DEN,0.0,0.0,4.0,A.Trautman,1.0,9
+deep,right,34.0,pass,"(6:26) (No Huddle, Shotgun) 10-B.Nix pass incomplete deep right to 14-C.Sutton (29-M.Stewart).",DEN,76.0,DEN,0.0,0.0,4.0,C.Sutton,0.0,9
+deep,middle,16.0,pass,(6:19) (Shotgun) 10-B.Nix pass incomplete deep middle to 14-C.Sutton.,DEN,76.0,DEN,0.0,0.0,4.0,C.Sutton,0.0,9
+short,right,-5.0,pass,(4:40) (Shotgun) 10-B.Nix pass short right to 12-R.Harvey pushed ob at DEN 24 for 4 yards (24-D.Stingley).,DEN,80.0,DEN,0.0,0.0,4.0,R.Harvey,1.0,9
+short,right,-5.0,pass,(4:33) (Shotgun) 10-B.Nix pass short right to 12-R.Harvey to DEN 36 for 12 yards (24-D.Stingley; 90-S.Rankins).,DEN,76.0,DEN,0.0,0.0,4.0,R.Harvey,1.0,9
+short,right,-2.0,pass,(3:45) 10-B.Nix pass short right to 27-J.Dobbins to DEN 34 for -2 yards (0-A.Al-Shaair).,DEN,64.0,DEN,0.0,0.0,4.0,J.Dobbins,1.0,9
+short,middle,13.0,pass,(2:18) (Shotgun) 10-B.Nix pass short middle to 13-P.Bryant to DEN 48 for 13 yards (29-M.Stewart).,DEN,65.0,DEN,0.0,0.0,4.0,P.Bryant,1.0,9
+short,right,5.0,pass,(1:32) (Shotgun) 10-B.Nix pass incomplete short right.,50,50.0,DEN,0.0,0.0,4.0,,0.0,9
+short,middle,5.0,pass,(1:26) (Shotgun) 10-B.Nix pass incomplete short middle to 1-E.Engram.,50,50.0,DEN,0.0,0.0,4.0,E.Engram,0.0,9
+short,left,-7.0,pass,(:50) (Shotgun) 10-B.Nix pass short left to 12-R.Harvey pushed ob at DEN 39 for 3 yards (2-C.Bullock).,DEN,64.0,DEN,0.0,0.0,4.0,R.Harvey,1.0,9
+short,right,6.0,pass,(2:56) (Shotgun) 10-B.Nix pass short right to 14-C.Sutton ran ob at DEN 26 for 6 yards.,DEN,80.0,DEN,0.0,0.0,1.0,C.Sutton,1.0,10
+,,,pass,"(2:26) (No Huddle, Shotgun) 10-B.Nix sacked at DEN 17 for -9 yards (69-A.Butler).",DEN,74.0,DEN,0.0,0.0,1.0,,0.0,10
+short,right,-1.0,pass,(1:45) (Shotgun) 10-B.Nix pass incomplete short right to 1-E.Engram (49-C.Snowden) [49-C.Snowden].,DEN,83.0,DEN,0.0,0.0,1.0,E.Engram,0.0,10
+short,left,7.0,pass,(13:29) (Shotgun) 10-B.Nix pass incomplete short left to 14-C.Sutton.,DEN,73.0,DEN,0.0,0.0,2.0,C.Sutton,0.0,10
+short,right,13.0,pass,"(13:24) (No Huddle, Shotgun) 10-B.Nix pass short right to 11-T.Franklin to DEN 40 for 13 yards (22-E.Stokes).",DEN,73.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,10
+short,left,3.0,pass,(8:58) 10-B.Nix pass short left to 27-J.Dobbins pushed ob at DEN 8 for 7 yards (33-J.Adams).,DEN,99.0,DEN,0.0,0.0,2.0,J.Dobbins,1.0,10
+short,right,-3.0,pass,"(8:30) (No Huddle, Shotgun) 10-B.Nix pass short right to 11-T.Franklin to DEN 10 for 2 yards (22-E.Stokes).",DEN,92.0,DEN,0.0,0.0,2.0,T.Franklin,1.0,10
+short,left,15.0,pass,"(7:53) (No Huddle, Shotgun) 10-B.Nix pass incomplete short left to 1-E.Engram (96-J.Laulu).",DEN,90.0,DEN,0.0,0.0,2.0,E.Engram,0.0,10
+short,right,1.0,pass,(4:54) (Shotgun) 10-B.Nix pass short right to 12-R.Harvey to LV 48 for 2 yards (33-J.Adams).,50,50.0,DEN,0.0,0.0,2.0,R.Harvey,1.0,10
+deep,right,19.0,pass,(4:10) (Shotgun) 10-B.Nix pass deep right to 13-P.Bryant pushed ob at LV 5 for 43 yards (32-L.Johnson).,LV,48.0,DEN,0.0,0.0,2.0,P.Bryant,1.0,10
+short,middle,7.0,pass,"(2:45) (Shotgun) 10-B.Nix pass short middle to 11-T.Franklin for 7 yards, TOUCHDOWN.",LV,7.0,DEN,0.0,1.0,2.0,T.Franklin,1.0,10
+short,right,-3.0,pass,(1:50) (Shotgun) 10-B.Nix pass incomplete short right to 28-T.Badie.,DEN,73.0,DEN,0.0,0.0,2.0,T.Badie,0.0,10
+short,right,5.0,pass,(1:45) (Shotgun) 10-B.Nix pass short right to 1-E.Engram to DEN 34 for 7 yards (45-D.White).,DEN,73.0,DEN,0.0,0.0,2.0,E.Engram,1.0,10
+short,left,14.0,pass,(1:21) (Shotgun) 10-B.Nix pass short left to 14-C.Sutton to DEN 38 for 14 yards (11-J.Chinn).,DEN,76.0,DEN,0.0,0.0,2.0,C.Sutton,1.0,10
+deep,right,17.0,pass,(:48) (Shotgun) 10-B.Nix pass incomplete deep right to 11-T.Franklin.,DEN,67.0,DEN,0.0,0.0,2.0,T.Franklin,0.0,10
+deep,middle,57.0,pass,(:43) (Shotgun) 10-B.Nix pass deep middle intended for 11-T.Franklin INTERCEPTED by 36-K.Kelly at LV 10. 36-K.Kelly to LV 36 for 26 yards (13-P.Bryant).,DEN,67.0,DEN,1.0,0.0,2.0,T.Franklin,0.0,10
+short,right,-5.0,pass,(14:11) (Shotgun) 10-B.Nix pass incomplete short right to 12-R.Harvey.,DEN,93.0,DEN,0.0,0.0,3.0,R.Harvey,0.0,10
+short,left,3.0,pass,(14:07) (Shotgun) 10-B.Nix pass incomplete short left to 13-P.Bryant.,DEN,93.0,DEN,0.0,0.0,3.0,P.Bryant,0.0,10
+short,right,1.0,pass,(10:27) 10-B.Nix pass short right to 46-A.Prentice pushed ob at DEN 39 for 13 yards (49-C.Snowden).,DEN,74.0,DEN,0.0,0.0,3.0,A.Prentice,1.0,10
+short,middle,3.0,pass,(7:53) (Shotgun) 10-B.Nix pass short middle to 12-R.Harvey to LV 38 for 7 yards (26-D.Porter) [96-J.Laulu].,LV,45.0,DEN,0.0,0.0,3.0,R.Harvey,1.0,10
+short,right,1.0,pass,"(3:55) (No Huddle, Shotgun) 10-B.Nix pass short right to 82-A.Trautman to LV 39 for 2 yards (32-L.Johnson).",LV,41.0,DEN,0.0,0.0,3.0,A.Trautman,1.0,10
+short,left,13.0,pass,(:47) (Shotgun) 10-B.Nix pass incomplete short left to 1-E.Engram.,LV,14.0,DEN,0.0,0.0,3.0,E.Engram,0.0,10
+short,right,-4.0,pass,(:43) (Shotgun) 10-B.Nix pass short right to 11-T.Franklin to LV 14 for no gain (11-J.Chinn; 45-D.White).,LV,14.0,DEN,0.0,0.0,3.0,T.Franklin,1.0,10
+short,right,4.0,pass,(13:50) (Shotgun) 10-B.Nix pass short right to 14-C.Sutton to DEN 37 for 4 yards (49-C.Snowden).,DEN,67.0,DEN,0.0,0.0,4.0,C.Sutton,1.0,10
+deep,left,41.0,pass,(13:14) 10-B.Nix pass incomplete deep left to 11-T.Franklin.,DEN,63.0,DEN,0.0,0.0,4.0,T.Franklin,0.0,10
+short,right,10.0,pass,(13:07) (Shotgun) 10-B.Nix pass incomplete short right.,DEN,63.0,DEN,0.0,0.0,4.0,,0.0,10
+short,right,-2.0,pass,(8:35) (Shotgun) 10-B.Nix pass short right to 1-E.Engram to DEN 25 for 5 yards (45-D.White; 22-E.Stokes).,DEN,80.0,DEN,0.0,0.0,4.0,E.Engram,1.0,10
+deep,left,20.0,pass,(7:16) (Shotgun) 10-B.Nix pass deep left intended for 11-T.Franklin INTERCEPTED by 36-K.Kelly at DEN 45. 36-K.Kelly to DEN 45 for no gain (11-T.Franklin).,DEN,75.0,DEN,1.0,0.0,4.0,T.Franklin,0.0,10
+short,right,5.0,pass,(3:06) 10-B.Nix pass short right to 11-T.Franklin ran ob at LV 35 for 18 yards (32-L.Johnson).,DEN,53.0,DEN,0.0,0.0,4.0,T.Franklin,1.0,10
+,,,pass,(15:00) (Shotgun) 10-B.Nix sacked at DEN 29 for -6 yards (27-C.Conner).,DEN,65.0,DEN,0.0,0.0,1.0,,0.0,11
+short,right,7.0,pass,(14:22) 10-B.Nix pass short right to 11-T.Franklin pushed ob at DEN 38 for 9 yards (27-C.Conner).,DEN,71.0,DEN,0.0,0.0,1.0,T.Franklin,1.0,11
+short,left,7.0,pass,(13:45) (Shotgun) 10-B.Nix pass short left to 13-P.Bryant to DEN 46 for 8 yards (56-G.Karlaftis).,DEN,62.0,DEN,0.0,0.0,1.0,P.Bryant,1.0,11
+deep,left,41.0,pass,(12:25) (Shotgun) 10-B.Nix pass incomplete deep left to 11-T.Franklin.,DEN,55.0,DEN,0.0,0.0,1.0,T.Franklin,0.0,11
+deep,middle,19.0,pass,"(12:18) (No Huddle, Shotgun) 10-B.Nix pass deep middle to 14-C.Sutton to KC 34 for 21 yards (8-K.Fulton).",DEN,55.0,DEN,0.0,0.0,1.0,C.Sutton,1.0,11
+short,right,-1.0,pass,(11:38) (Shotgun) 10-B.Nix pass short right to 1-E.Engram pushed ob at KC 26 for 8 yards (30-C.Roland-Wallace).,KC,34.0,DEN,0.0,0.0,1.0,E.Engram,1.0,11
+short,left,5.0,pass,(9:37) (Shotgun) 10-B.Nix pass short left to 13-P.Bryant to KC 12 for 6 yards (35-J.Watson).,KC,18.0,DEN,0.0,0.0,1.0,P.Bryant,1.0,11
+short,left,2.0,pass,(9:00) (Shotgun) 73-F.Crum reported in as eligible. 12-R.Harvey pass incomplete short left to 10-B.Nix.,KC,12.0,DEN,0.0,0.0,1.0,B.Nix,0.0,11
+short,right,0.0,pass,(8:54) (Shotgun) 10-B.Nix pass short right to 1-E.Engram to KC 5 for 7 yards (6-B.Cook; 30-C.Roland-Wallace).,KC,12.0,DEN,0.0,0.0,1.0,E.Engram,1.0,11
+,,,pass,(8:19) (Shotgun) 10-B.Nix sacked at KC 11 for -6 yards (95-C.Jones).,KC,5.0,DEN,0.0,0.0,1.0,,0.0,11
+short,middle,1.0,pass,(5:00) (Shotgun) 10-B.Nix pass incomplete short middle to 14-C.Sutton (54-L.Chenal).,KC,6.0,DEN,0.0,0.0,1.0,C.Sutton,0.0,11
+short,left,-6.0,pass,(:08) (Shotgun) 10-B.Nix pass short left to 38-J.McLaughlin to DEN 34 for -5 yards (22-T.McDuffie).,DEN,61.0,DEN,0.0,0.0,1.0,J.McLaughlin,1.0,11
+short,right,1.0,pass,(15:00) (Shotgun) 10-B.Nix pass short right to 1-E.Engram pushed ob at DEN 43 for 9 yards (22-T.McDuffie).,DEN,66.0,DEN,0.0,0.0,2.0,E.Engram,1.0,11
+short,middle,11.0,pass,(4:32) (Shotgun) 10-B.Nix pass short middle to 13-P.Bryant to DEN 44 for 15 yards (27-C.Conner).,DEN,71.0,DEN,0.0,0.0,2.0,P.Bryant,1.0,11
+short,middle,0.0,pass,(3:57) 10-B.Nix pass incomplete short middle to 14-C.Sutton [56-G.Karlaftis].,DEN,56.0,DEN,0.0,0.0,2.0,C.Sutton,0.0,11
+short,left,-5.0,pass,(3:53) (Shotgun) 10-B.Nix pass short left to 12-R.Harvey pushed ob at DEN 46 for 2 yards (30-C.Roland-Wallace).,DEN,56.0,DEN,0.0,0.0,2.0,R.Harvey,1.0,11
+short,right,9.0,pass,"(3:16) (No Huddle, Shotgun) 10-B.Nix pass incomplete short right to 11-T.Franklin [56-G.Karlaftis].",DEN,54.0,DEN,0.0,0.0,2.0,T.Franklin,0.0,11
+short,left,7.0,pass,"(1:23) (No Huddle, Shotgun) 10-B.Nix pass incomplete short left to 13-P.Bryant (30-C.Roland-Wallace).",DEN,65.0,DEN,0.0,0.0,2.0,P.Bryant,0.0,11
+short,right,5.0,pass,(10:04) 10-B.Nix pass short right to 11-T.Franklin pushed ob at DEN 19 for 8 yards (27-C.Conner).,DEN,89.0,DEN,0.0,0.0,3.0,T.Franklin,1.0,11
+short,right,5.0,pass,"(8:45) (No Huddle, Shotgun) 10-B.Nix pass incomplete short right.",DEN,77.0,DEN,0.0,0.0,3.0,,0.0,11
+deep,left,25.0,pass,"(7:58) (No Huddle, Shotgun) 10-B.Nix pass deep left to 11-T.Franklin pushed ob at KC 40 for 35 yards (8-K.Fulton).",DEN,75.0,DEN,0.0,0.0,3.0,T.Franklin,1.0,11
+short,left,8.0,pass,"(7:23) (No Huddle, Shotgun) 10-B.Nix pass short left to 14-C.Sutton to KC 27 for 13 yards (6-B.Cook).",KC,40.0,DEN,0.0,0.0,3.0,C.Sutton,1.0,11
+short,left,2.0,pass,(6:07) (Shotgun) 10-B.Nix pass short left to 12-R.Harvey to KC 19 for 7 yards (6-B.Cook).,KC,26.0,DEN,0.0,0.0,3.0,R.Harvey,1.0,11
+short,left,1.0,pass,"(5:30) (No Huddle, Shotgun) 10-B.Nix pass short left to 12-R.Harvey to KC 8 for 11 yards (22-T.McDuffie).",KC,19.0,DEN,0.0,0.0,3.0,R.Harvey,1.0,11
+deep,left,29.0,pass,(:41) 10-B.Nix pass deep left to 13-P.Bryant to KC 32 for 48 yards (6-B.Cook). DEN-13-P.Bryant was injured during the play.,DEN,80.0,DEN,0.0,0.0,3.0,P.Bryant,1.0,11
+short,left,-3.0,pass,(:13) (Shotgun) 10-B.Nix pass short left to 1-E.Engram to KC 23 for 9 yards (97-A.Gillotte).,KC,32.0,DEN,0.0,0.0,3.0,E.Engram,1.0,11
+short,right,5.0,pass,(15:00) (Shotgun) 10-B.Nix pass incomplete short right to 46-A.Prentice.,KC,23.0,DEN,0.0,0.0,4.0,A.Prentice,0.0,11
+short,left,-5.0,pass,(13:39) (Shotgun) 10-B.Nix pass short left to 28-T.Badie to KC 20 for no gain (56-G.Karlaftis; 32-N.Bolton).,KC,20.0,DEN,0.0,0.0,4.0,T.Badie,1.0,11
+short,left,10.0,pass,(12:58) (Shotgun) 10-B.Nix pass incomplete short left to 14-C.Sutton. ** Injury Update: DEN-13-P.Bryant has returned to the game.,KC,20.0,DEN,0.0,0.0,4.0,C.Sutton,0.0,11
+short,middle,-4.0,pass,"(9:12) (Shotgun) 10-B.Nix pass incomplete short middle [95-C.Jones]. PENALTY on DEN-10-B.Nix, Intentional Grounding, 10 yards, enforced at DEN 32.",DEN,68.0,DEN,0.0,0.0,4.0,,0.0,11
+short,left,5.0,pass,(9:05) (Shotgun) 10-B.Nix pass short left to 46-A.Prentice to DEN 36 for 14 yards (32-N.Bolton).,DEN,78.0,DEN,0.0,0.0,4.0,A.Prentice,1.0,11
+short,right,2.0,pass,(6:30) (Shotgun) 10-B.Nix pass short right to 82-A.Trautman pushed ob at KC 47 for 8 yards (32-N.Bolton).,DEN,55.0,DEN,0.0,0.0,4.0,A.Trautman,1.0,11
+deep,left,36.0,pass,(4:28) (Shotgun) 10-B.Nix pass incomplete deep left to 11-T.Franklin.,KC,36.0,DEN,0.0,0.0,4.0,T.Franklin,0.0,11
+short,right,3.0,pass,"(4:23) (No Huddle, Shotgun) 10-B.Nix pass incomplete short right to 14-C.Sutton.",KC,36.0,DEN,0.0,0.0,4.0,C.Sutton,0.0,11
+short,left,-2.0,pass,(2:59) (Shotgun) 10-B.Nix pass short left to 13-P.Bryant to DEN 31 for 5 yards (30-C.Roland-Wallace; 27-C.Conner).,DEN,74.0,DEN,0.0,0.0,4.0,P.Bryant,1.0,11
+deep,right,46.0,pass,(2:12) (Shotgun) 10-B.Nix pass incomplete deep right to 11-T.Franklin.,DEN,79.0,DEN,0.0,0.0,4.0,T.Franklin,0.0,11
+deep,right,20.0,pass,"(2:05) (No Huddle, Shotgun) 10-B.Nix pass deep right to 14-C.Sutton to DEN 41 for 20 yards (6-B.Cook).",DEN,79.0,DEN,0.0,0.0,4.0,C.Sutton,1.0,11
+short,left,5.0,pass,(1:18) (Shotgun) 10-B.Nix pass incomplete short left to 1-E.Engram (32-N.Bolton).,DEN,54.0,DEN,0.0,0.0,4.0,E.Engram,0.0,11
+short,right,4.0,pass,(1:15) (Shotgun) 10-B.Nix pass short right to 14-C.Sutton to KC 49 for 5 yards (32-N.Bolton). (Virtual Measurement).,DEN,54.0,DEN,0.0,0.0,4.0,C.Sutton,1.0,11
+deep,left,24.0,pass,(:54) (Shotgun) 10-B.Nix pass deep left to 11-T.Franklin to KC 15 for 32 yards (35-J.Watson).,KC,47.0,DEN,0.0,0.0,4.0,T.Franklin,1.0,11
