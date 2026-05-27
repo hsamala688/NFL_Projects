@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: mart_qb_season
+    description: "QB season summary stats, regular season only, min 100 attempts"
+    columns:
+      - name: passer_player_name
+        tests:
+          - not_null
+      - name: attempts
+        tests:
+          - not_null
+      - name: completion_pct
+        tests:
+          - not_null
+      - name: season
+        tests:
+          - not_null

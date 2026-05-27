@@ -1,0 +1,7 @@
+nfl_analytics:
+  outputs:
+    dev:
+      type: duckdb
+      path: /absolute/path/to/NFL-Projects/db/nfl.duckdb  # update this to your local path
+      threads: 4
+  target: dev
