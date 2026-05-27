@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: nflverse
+    database: nfl
+    schema: main
+    tables:
+      - name: pbp
+        description: "Unified play-by-play view across all seasons"
