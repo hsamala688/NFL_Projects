@@ -1,8 +1,8 @@
 with passing_plays as (
     select * from {{ ref('stg_pbp') }}
-    where (complete_pass = 1 or incomplete_pass = 1)
-      and passer_player_name is not null
-      and season_type = 'REG'
+    where (complete_pass = 1 or incomplete_pass = 1 or interception = 1)
+        and passer_player_name is not null
+        and season_type = 'REG'
 )
 
 select
