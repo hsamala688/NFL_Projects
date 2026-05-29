@@ -24,6 +24,11 @@ select
     epa,
     win_probability_added,
     completion_pct_over_expected,
+    pass_location,
+    score_differential,
+    game_seconds_remaining,
+    shotgun,
+    no_huddle,
     case
         when yards_to_go <= 3  then 'short'
         when yards_to_go <= 7  then 'medium'
