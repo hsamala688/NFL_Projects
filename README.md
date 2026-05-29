@@ -1,6 +1,6 @@
 # NFL Analytics Pipeline
  
-A production-style NFL data pipeline built as a portfolio project. Raw play-by-play data flows through ingestion, DuckDB, dbt transformations, Prefect orchestration, and a Streamlit dashboard.
+A production-style NFL data pipeline. Raw play-by-play data flows through ingestion, DuckDB, dbt transformations, Prefect orchestration, and a Streamlit dashboard.
  
 ```
 nflreadpy → Parquet → DuckDB → dbt → Prefect → Streamlit
