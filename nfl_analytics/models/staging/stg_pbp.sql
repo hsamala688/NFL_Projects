@@ -22,6 +22,9 @@ select
     quarter_seconds_remaining,
     half_seconds_remaining,
     game_seconds_remaining,
+    score_differential,
+    shotgun,
+    no_huddle,
 
     -- passer info
     passer_player_id,
@@ -35,6 +38,7 @@ select
     air_yards,
     yards_after_catch,
     yards_gained,
+    pass_location,
 
     -- advanced metrics
     epa,
