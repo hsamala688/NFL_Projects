@@ -9,3 +9,8 @@ Bo-Nix-Analysis/venv/
 .idea/
 data/raw/
 db/
+logs/
+*.log
+target/
+dbt_packages/
+nfl_analytics/logs/
