@@ -31,9 +31,9 @@ NFL-Projects/
 │   └── load_duckdb.py       # Register Parquet files as DuckDB views
 ├── nfl_analytics/           # dbt project
 │   └── models/
-│       ├── staging/         # stg_pbp.sql — clean & rename raw columns
-│       ├── intermediate/    # int_qb_plays.sql — per-play passing metrics
-│       └── marts/           # mart_qb_season.sql — QB season aggregates
+│       ├── staging/         # stg_pbp.sql, clean & rename raw columns
+│       ├── intermediate/    # int_qb_plays.sql, per-play passing metrics
+│       └── marts/           # mart_qb_season.sql, QB season aggregates
 ├── flows/
 │   └── nfl_pipeline.py      # Prefect orchestration flow
 ├── dashboard/
@@ -109,7 +109,7 @@ python ml/train.py
 ### 5. Launch the dashboard
 
 ```bash
-# From repo root — loads the saved model and runs live predictions
+# From repo root, loads the saved model and runs live predictions
 streamlit run dashboard/app.py
 ```
 
@@ -117,13 +117,13 @@ streamlit run dashboard/app.py
 
 ## dbt Models
 
-### Staging — `stg_pbp`
+### Staging (`stg_pbp`)
 Selects and renames relevant columns from the raw `pbp` DuckDB view. No business logic, just cleaning.
 
-### Intermediate — `int_qb_plays`
+### Intermediate (`int_qb_plays`)
 Filters to regular season passing plays (`complete_pass`, `incomplete_pass`, or `interception`), computes per-play metrics (EPA, air yards, CPOE, WPA), and classifies plays into distance buckets (short / medium / long). Also exposes all ML feature columns.
 
-### Marts — `mart_qb_season`
+### Marts (`mart_qb_season`)
 Aggregates to QB season summary. Minimum 100 attempts threshold. Columns:
 
 | Column | Description |
@@ -163,17 +163,17 @@ python flows/nfl_pipeline.py
 
 The Streamlit dashboard reads directly from DuckDB and renders two tabs:
 
-**📊 Season Stats**
-- Season selector — switch between available seasons
-- QB Leaderboard — sortable table of all QBs with all metrics
-- Scatter plot — completion % vs avg EPA to identify efficient QBs
-- Bar chart — top 10 QBs by avg EPA
-- QB detail view — select any QB and see their full stat line, including model CPOE
+**Season Stats**
+- Season selector to switch between available seasons
+- QB Leaderboard, a sortable table of all QBs with all metrics
+- Scatter plot of completion % vs avg EPA to identify efficient QBs
+- Bar chart of the top 10 QBs by avg EPA
+- QB detail view to select any QB and see their full stat line, including model CPOE
 
-**🤖 ML — Model CPOE**
-- CPOE leaderboard — QB rankings by model-adjusted completion % over expected
-- Diverging bar chart — top and bottom 10 QBs by model CPOE
-- Scatter plot — raw completion % vs model CPOE to surface which QBs are padding stats with easy throws vs genuinely outperforming their situations
+**ML Model CPOE**
+- CPOE leaderboard of QB rankings by model-adjusted completion % over expected
+- Diverging bar chart of the top and bottom 10 QBs by model CPOE
+- Scatter plot of raw completion % vs model CPOE to surface which QBs are padding stats with easy throws vs genuinely outperforming their situations
 
 ---
 
@@ -191,14 +191,20 @@ The ML layer trains an XGBoost binary classifier to predict whether a given pass
 | Logistic Regression (baseline) | 0.6704 | 0.6075 |
 | XGBoost | 0.6985 | 0.5899 |
 
-Air yards is by far the most important feature (40% importance), confirming that depth of target is the dominant situational predictor of completion. The ~0.70 AUC ceiling is consistent with published CPOE models on the same data — the remaining unpredictability reflects genuine uncertainty (coverage, separation, execution) not visible in pre-snap features.
+Air yards is by far the most important feature (40% importance), confirming that depth of target is the dominant situational predictor of completion. The ~0.70 AUC ceiling is consistent with published CPOE models on the same data. The remaining unpredictability reflects genuine uncertainty (coverage, separation, execution) not visible in pre-snap features.
 
-The dashboard loads the saved model at startup and runs live per-play predictions to generate each QB's model CPOE — no stale CSV required.
+The dashboard loads the saved model at startup and runs live per-play predictions to generate each QB's model CPOE, with no stale CSV required.
+
+**Decision Tree**
+
+This project was constructed in part as my final project for Cluster 10CW at UCLA. As such, I decided to include a demonstration of what the actual decision tree looks like for reference.
+
+![Decision Tree](NFl-Projects/ml/tree_plot.png)
 
 ---
 
 ## Notes
 
-- `db/nfl.duckdb`, `data/raw/`, and `ml/xgb_model.json` are gitignored — all are fully regenerable by running the bootstrap commands above
+- `db/nfl.duckdb`, `data/raw/`, and `ml/xgb_model.json` are gitignored, and all are fully regenerable by running the bootstrap commands above
 - DuckDB uses file-level locking: only one write connection can be open at a time. Close any open connections before running `dbt run`
-- `mart_qb_season` is a dbt view, not a materialized table — it recomputes on every query, which is fine at this data scale
+- `mart_qb_season` is a dbt view, not a materialized table, so it recomputes on every query, which is fine at this data scale
