@@ -199,7 +199,7 @@ The dashboard loads the saved model at startup and runs live per-play prediction
 
 This project was constructed in part as my final project for Cluster 10CW at UCLA. As such, I decided to include a demonstration of what the actual decision tree looks like for reference.
 
-![Decision Tree](NFl-Projects/ml/tree_plot.png)
+![Decision Tree](ml/tree_plot.png)
 
 ---
 
