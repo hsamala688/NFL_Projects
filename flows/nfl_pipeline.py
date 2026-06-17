@@ -63,10 +63,10 @@ if __name__ == "__main__":
     import sys
 
     if "--run-now" in sys.argv:
-        # Manual one-shot trigger (what we used in testing)
+        # Manual one-shot trigger
         nfl_pipeline()
     else:
-        # Start the scheduler — keeps the process alive, waits for cron
+        # Start the scheduler to keep the process alive, waiting for cron
         nfl_pipeline.serve(
             name="nfl-pipeline-scheduled",
             cron="0 6 * * 2",  # Every Tuesday at 6:00 AM
