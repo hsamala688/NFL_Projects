@@ -3,7 +3,7 @@ venv/
 __pycache__/
 .DS_Store
 *.pyc
-Bo-Nix-Analysis/venv/
+Bo-Nix-Analysis/
 .ipynb_checkpoints/
 *.html
 .idea/
