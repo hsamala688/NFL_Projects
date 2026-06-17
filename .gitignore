@@ -16,3 +16,4 @@ dbt_packages/
 nfl_analytics/logs/
 ml/xgb_model.json
 ml/qb_cpoe_2025.csv
+CLUSTER-10C-Submission/
