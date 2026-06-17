@@ -164,7 +164,7 @@ with tab1:
     leaderboard["CPOE"]      = leaderboard["CPOE"].round(2)
     leaderboard["Total WPA"] = leaderboard["Total WPA"].round(2)
 
-    st.dataframe(leaderboard, use_container_width=True, hide_index=True)
+    st.dataframe(leaderboard, width="stretch", hide_index=True)
 
     # Scatter Plot
     st.subheader("Completion % vs Avg EPA")
@@ -181,7 +181,7 @@ with tab1:
     )
     fig.update_traces(textposition="top center", marker=dict(size=8))
     fig.update_layout(height=500)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     # Bar Chart
     st.subheader("Top 10 QBs by Avg EPA")
@@ -197,7 +197,7 @@ with tab1:
     )
     fig2.update_traces(textposition="outside")
     fig2.update_layout(height=400)
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width="stretch")
 
     # QB Detail View
     st.subheader("QB Detail View")
@@ -269,7 +269,7 @@ with tab2:
         .reset_index(drop=True)
     )
 
-    st.dataframe(ml_leaderboard, use_container_width=True, hide_index=True)
+    st.dataframe(ml_leaderboard, width="stretch", hide_index=True)
 
     # ── CPOE Bar Chart — top 10 and bottom 10 ─────────────────────────────────
     st.subheader("Top & Bottom 10 QBs by Model CPOE")
@@ -291,7 +291,7 @@ with tab2:
     )
     fig3.update_traces(textposition="outside")
     fig3.update_layout(height=550, coloraxis_showscale=False)
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(fig3, width="stretch")
 
     # ── Scatter: raw completion % vs model CPOE ───────────────────────────────
     st.subheader("Raw Completion % vs Model CPOE")
@@ -319,4 +319,4 @@ with tab2:
     fig4.add_hline(y=0, line_dash="dash", line_color="gray", opacity=0.6)
     fig4.update_traces(textposition="top center", marker=dict(size=8))
     fig4.update_layout(height=520)
-    st.plotly_chart(fig4, use_container_width=True)
+    st.plotly_chart(fig4, width="stretch")
