@@ -11,7 +11,6 @@ from agent.semantic_layer import COLUMNS, METRICS, QUERYABLE_VIEWS
 _VIEWS = set(QUERYABLE_VIEWS)
 _DB_PATH = Path(__file__).resolve().parent.parent / "db" / "nfl.duckdb"
 
-# Need to change the error messages in _validate() to make sure that when they raise ValueError it doesn't shut down the whole agent process
 def _validate(sql: str) -> None:
     """Reject anything that is not a single SELECT over the whitelisted views."""
     try:
