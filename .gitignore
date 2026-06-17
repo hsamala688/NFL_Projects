@@ -1,11 +1,27 @@
+# secrets
 .env
+agent/.env
+
+# ADK local session state
+.adk/
+**/.adk/
+
+# python
+__pycache__/
+*.pyc
+
+# Venvs
 venv/
 .venv/
-__pycache__/
+
+# MacOs Relevant
 .DS_Store
-*.pyc
+
+# Bo Nix Stuff + Cluster Stuff
 Bo-Nix-Analysis/
+CLUSTER-10C-Submission/
 .ipynb_checkpoints/
+
 *.html
 .idea/
 data/raw/
@@ -15,6 +31,7 @@ logs/
 target/
 dbt_packages/
 nfl_analytics/logs/
+
+# ml + data for ml
 ml/xgb_model.json
 ml/qb_cpoe_2025.csv
-CLUSTER-10C-Submission/
