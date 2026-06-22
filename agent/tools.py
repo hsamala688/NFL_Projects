@@ -50,8 +50,9 @@ def query_marts(sql: str) -> dict:
     mart_qb_season or int_qb_plays. Returns status plus rows, or an error message.
     """
 
-    try: 
+    try:
         _validate(sql)
+        sql = sqlglot.transpile(sql, read="duckdb", write="duckdb")[0]
         with duckdb.connect(str(_DB_PATH), read_only=True, config={"enable_external_access": False}) as con:
             cur = con.execute(sql)
             columns = [c[0] for c in cur.description]
