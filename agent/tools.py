@@ -1,8 +1,11 @@
 from pathlib import Path
+import logging
 import duckdb
 import sqlglot
 from sqlglot import exp
 import xgboost as xgb
+
+logger = logging.getLogger(__name__)
 from ml.predict import prepare_features, compute_qb_cpoe, MODEL_PATH
 
 # Single source of truth. Do not redefine the whitelist here.
@@ -148,6 +151,7 @@ def run_cpoe(season: int = 2025) -> dict:
         df["completion_prob"] = _load_model().predict_proba(df[feature_cols])[:, 1].astype("float64")
         qb = compute_qb_cpoe(df)
         return {"status": "success", "rows": qb.to_dict(orient="records"), "play_count": play_count}
-    
+
     except Exception as e:
+        logger.exception("run_cpoe failed for season %s", season)
         return {"status": "error", "error_message": str(e)}
