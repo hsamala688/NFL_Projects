@@ -190,7 +190,7 @@ function describeToolCall(tc: ToolCallRecord): { title: string; detail: string }
   if (tc.tool === 'query_marts') {
     return {
       title: 'NFL Statistics Database Query',
-      detail: tc.inputs.sql ?? '',
+      detail: (tc.inputs.sql as string) ?? '',
     }
   }
   return {
