@@ -3,13 +3,13 @@ import duckdb
 import sqlglot
 from sqlglot import exp
 import xgboost as xgb
-from ml.predict import prepare_features, compute_qb_cpoe, MODEL_PATH, DB_PATH
+from ml.predict import prepare_features, compute_qb_cpoe, MODEL_PATH
 
 # Single source of truth. Do not redefine the whitelist here.
 from agent.semantic_layer import COLUMNS, METRICS, QUERYABLE_VIEWS
 
 _VIEWS = set(QUERYABLE_VIEWS)
-_DB_PATH = Path(__file__).resolve().parent.parent / "db" / "nfl.duckdb"
+_DB_PATH = Path(__file__).resolve().parent.parent / "db" / "serving.duckdb"
 
 def _validate(sql: str) -> None:
     """Reject anything that is not a single SELECT over the whitelisted views."""
@@ -27,6 +27,16 @@ def _validate(sql: str) -> None:
 
     # CTE aliases are not real tables, so remove them before the whitelist check.
     cte_names = {cte.alias_or_name for cte in stmt.find_all(exp.CTE)}
+
+    # Explicitly reject table functions (read_csv, read_parquet, glob, etc.).
+    # Belt-and-suspenders on top of the engine sandbox.
+    for t in stmt.find_all(exp.Table):
+        if t.alias_or_name not in cte_names and isinstance(t.this, exp.Func):
+            raise ValueError(
+                f"FROM clause may not use table functions such as read_csv or read_parquet. "
+                f"Only {sorted(_VIEWS)} are permitted."
+            )
+
     referenced = {t.name for t in stmt.find_all(exp.Table)} - cte_names
     illegal = referenced - _VIEWS
     if illegal:
@@ -42,7 +52,7 @@ def query_marts(sql: str) -> dict:
 
     try: 
         _validate(sql)
-        with duckdb.connect(str(_DB_PATH), read_only=True) as con:
+        with duckdb.connect(str(_DB_PATH), read_only=True, config={"enable_external_access": False}) as con:
             cur = con.execute(sql)
             columns = [c[0] for c in cur.description]
             rows = [dict(zip(columns, row)) for row in cur.fetchall()]
@@ -105,8 +115,18 @@ def run_cpoe(season: int = 2025) -> dict:
     attempts: actual_pct, expected_pct, model_cpoe, raw_rank, model_rank, rank_diff.
     Returns status plus rows, or an error message.
     """
+    if season < 2006:
+        return {
+            "status": "error",
+            "error_message": (
+                f"model CPOE is only available from 2006 onward because air_yards, its dominant "
+                f"feature, was not charted before then. For season {season}, use query_marts "
+                f"for raw stats or avg_cpoe."
+            ),
+        }
+
     try:
-        conn = duckdb.connect(str(DB_PATH), read_only=True)
+        conn = duckdb.connect(str(_DB_PATH), read_only=True, config={"enable_external_access": False})
         df = conn.execute(
             """
             SELECT passer_player_name, season, week, down, yards_to_go,
@@ -123,9 +143,10 @@ def run_cpoe(season: int = 2025) -> dict:
             return {"status": "error", "error_message": f"No plays found for season {season}."}
 
         df, feature_cols = prepare_features(df)
+        play_count = len(df)
         df["completion_prob"] = _load_model().predict_proba(df[feature_cols])[:, 1].astype("float64")
         qb = compute_qb_cpoe(df)
-        return {"status": "success", "rows": qb.to_dict(orient="records")}
+        return {"status": "success", "rows": qb.to_dict(orient="records"), "play_count": play_count}
     
     except Exception as e:
         return {"status": "error", "error_message": str(e)}
