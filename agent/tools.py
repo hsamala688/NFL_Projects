@@ -153,5 +153,7 @@ def run_cpoe(season: int = 2025) -> dict:
         return {"status": "success", "rows": qb.to_dict(orient="records"), "play_count": play_count}
 
     except Exception as e:
+        import traceback, sys
+        print(f"run_cpoe ERROR season={season}: {e}\n{traceback.format_exc()}", file=sys.stderr, flush=True)
         logger.exception("run_cpoe failed for season %s", season)
         return {"status": "error", "error_message": str(e)}
