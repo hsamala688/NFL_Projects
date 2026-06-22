@@ -6,7 +6,7 @@ from fastapi.security import APIKeyHeader
 
 from agent.respond import ask_async, AnalystResponse
 from backend import cache
-from backend.config import AGENT_API_KEY, FRONTEND_ORIGIN
+from backend.config import AGENT_API_KEY, FRONTEND_ORIGINS
 from backend.schemas import AskRequest
 
 logger = logging.getLogger(__name__)
@@ -15,7 +15,7 @@ app = FastAPI(title="NFL Analyst API", docs_url=None, redoc_url=None)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[FRONTEND_ORIGIN],
+    allow_origins=FRONTEND_ORIGINS,
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type", "X-API-Key"],
 )
