@@ -11,7 +11,11 @@ if _backend_env.exists():
 else:
     load_dotenv(Path(__file__).parent.parent / ".env")
 
-FRONTEND_ORIGIN: str = os.getenv("FRONTEND_ORIGIN", "http://localhost:5173")
+FRONTEND_ORIGINS: list[str] = [
+    o.strip()
+    for o in os.getenv("FRONTEND_ORIGIN", "http://localhost:5173").split(",")
+    if o.strip()
+]
 MAX_QUESTION_LENGTH: int = 500
 # Set in backend/.env. If empty the live /ask endpoint rejects all requests.
 AGENT_API_KEY: str = os.getenv("AGENT_API_KEY", "")
