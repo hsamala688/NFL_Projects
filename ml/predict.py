@@ -9,6 +9,7 @@ MODEL_PATH = Path(__file__).parent / "xgb_model.json"
 
 # ── must match train.py exactly ───────────────────────────────────────────────
 NUMERIC_FEATURES = [
+    "season",
     "down",
     "yards_to_go",
     "yards_from_endzone",

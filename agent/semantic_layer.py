@@ -12,7 +12,7 @@ intentionally not queryable. It carries the full raw nflverse surface, which
 widens what the agent can get wrong, and everything the agent needs is already
 present in the two views below.
 
-Ranges below are the observed min/max over the 2020 to 2025 data, taken from
+Ranges below are the observed min/max over the 1999 to 2025 data, taken from
 DuckDB SUMMARIZE. Re-run SUMMARIZE after ingesting a new season to refresh them.
 """
 
@@ -23,14 +23,14 @@ QUERYABLE_VIEWS = ["mart_qb_season", "int_qb_plays"]
 # Column dictionary: view -> column -> metadata.
 #   meaning: plain English
 #   type: SQL/python type
-#   range: observed range over 2020 to 2025 (from SUMMARIZE)
+#   range: observed range over 1999 to 2025 (from SUMMARIZE)
 #   renamed_from: the raw nflverse column it was renamed from, where applicable
 COLUMNS = {
     "mart_qb_season": {
         "season": {
-            "meaning": "NFL season year.",
+            "meaning": "NFL season year. Data covers 1999 to 2025.",
             "type": "int",
-            "range": "2020 to 2025",
+            "range": "1999 to 2025",
         },
         "passer_player_id": {
             "meaning": "nflverse unique player id (GSIS id) for the quarterback.",
@@ -43,20 +43,20 @@ COLUMNS = {
             "range": "one row per QB per season",
         },
         "team": {
-            "meaning": "Possession team abbreviation for the QB-season (e.g. DEN).",
+            "meaning": "Possession team abbreviation for the QB-season (e.g. DEN). 32 distinct current abbreviations; nflreadpy normalizes all historical codes (e.g. SD to LAC, STL to LA, OAK to LV).",
             "type": "string",
-            "range": "standard NFL team abbreviations (35 distinct, including relocated teams)",
+            "range": "32 distinct current abbreviations (nflreadpy normalizes all historical codes to current ones, e.g. SD to LAC, STL to LA, OAK to LV)",
             "renamed_from": "possession_team",
         },
         "attempts": {
             "meaning": "Pass attempts in the QB-season. One attempt is one row in int_qb_plays.",
             "type": "int",
-            "range": "101 to 733 (100 minimum enforced by construction)",
+            "range": "100 to 733 (100 minimum enforced by construction)",
         },
         "completions": {
             "meaning": "Completed passes (attempts where is_complete = 1).",
             "type": "int",
-            "range": "54 to 490",
+            "range": "44 to 490",
         },
         "completion_pct": {
             "meaning": (
@@ -66,41 +66,42 @@ COLUMNS = {
                 "prefer model_cpoe from the run_cpoe tool."
             ),
             "type": "float",
-            "range": "47.7 to 73.8",
+            "range": "38.6 to 74.4",
         },
         "avg_epa": {
             "meaning": "Mean Expected Points Added per play. The leaderboard is sorted by this descending.",
             "type": "float",
-            "range": "-0.48 to 0.47",
+            "range": "-0.483 to 0.549",
         },
         "avg_air_yards": {
-            "meaning": "Mean air yards per attempt. A rough proxy for how aggressive the throw diet is.",
+            "meaning": "Mean air yards per attempt. A rough proxy for how aggressive the throw diet is. Null for seasons before 2006 (air_yards was not charted).",
             "type": "float",
-            "range": "5.1 to 12.2",
+            "range": "5.1 to 12.9 (null for seasons before 2006; about 26% of QB-seasons are null)",
         },
         "avg_yac": {
-            "meaning": "Mean yards after catch on completed passes only.",
+            "meaning": "Mean yards after catch on completed passes only. Null for seasons before 2006.",
             "type": "float",
-            "range": "2.8 to 7.6",
+            "range": "-1.0 to 11.7 (null for seasons before 2006; about 24% of QB-seasons are null)",
         },
         "avg_cpoe": {
             "meaning": (
                 "Mean of nflverse's BUILT-IN completion percentage over expected (the cpoe field). "
                 "This is NOT the project's model_cpoe. It comes from nflfastR's own model, not the "
-                "XGBoost model. See METRICS for the distinction and which tool produces which."
+                "XGBoost model. See METRICS for the distinction and which tool produces which. "
+                "Null for seasons before 2006 (cpoe was not charted)."
             ),
             "type": "float",
-            "range": "-12.97 to 10.78 percentage points",
+            "range": "-14.35 to 10.78 percentage points (null for seasons before 2006; about 26% of QB-seasons are null)",
         },
         "interceptions": {
             "meaning": "Total interceptions thrown in the QB-season.",
             "type": "int",
-            "range": "0 to 21",
+            "range": "0 to 30",
         },
         "total_wpa": {
             "meaning": "Sum of Win Probability Added across the QB's plays.",
             "type": "float",
-            "range": "-1.22 to 7.36",
+            "range": "-2.783 to 7.359",
         },
     },
     "int_qb_plays": {
@@ -112,12 +113,12 @@ COLUMNS = {
         "game_id": {
             "meaning": "Unique game identifier (e.g. 2025_01_DEN_SEA).",
             "type": "string",
-            "range": "one value per game (1322 games)",
+            "range": "one value per game (approx 5,158 games, 1999 to 2025)",
         },
         "season": {
-            "meaning": "NFL season year.",
+            "meaning": "NFL season year. Data covers 1999 to 2025.",
             "type": "int",
-            "range": "2020 to 2025",
+            "range": "1999 to 2025",
         },
         "week": {
             "meaning": "Regular-season week.",
@@ -125,9 +126,9 @@ COLUMNS = {
             "range": "1 to 18",
         },
         "possession_team": {
-            "meaning": "Offense (passing) team abbreviation on the play.",
+            "meaning": "Offense (passing) team abbreviation on the play. 32 distinct current abbreviations; nflreadpy normalizes all historical codes to current ones.",
             "type": "string",
-            "range": "standard NFL team abbreviations (35 distinct, including relocated teams)",
+            "range": "32 distinct current abbreviations (nflreadpy normalizes all historical codes to current ones)",
         },
         "passer_player_id": {
             "meaning": "nflverse unique player id (GSIS id) for the quarterback.",
@@ -147,7 +148,7 @@ COLUMNS = {
         "yards_to_go": {
             "meaning": "Yards needed for a first down at the snap.",
             "type": "int",
-            "range": "1 to 41",
+            "range": "1 to 50",
             "renamed_from": "ydstogo",
         },
         "yards_from_endzone": {
@@ -169,50 +170,51 @@ COLUMNS = {
             "renamed_from": "interception",
         },
         "air_yards": {
-            "meaning": "Yards the ball traveled in the air past the line of scrimmage. Dominant completion-probability feature.",
+            "meaning": "Yards the ball traveled in the air past the line of scrimmage. Dominant completion-probability feature. Null before 2006 (not charted); about 25% null overall.",
             "type": "float",
-            "range": "-90 to 65 (mostly 0 to 50; large negatives are laterals or charting quirks; about 0.04% null)",
+            "range": "-93 to 78 (mostly 0 to 50; large negatives are laterals or charting quirks; null before 2006, about 25% null overall)",
         },
         "yards_after_catch": {
             "meaning": "Yards gained after the catch. Null on non-completions, so it exists for about 65% of rows.",
             "type": "float",
-            "range": "-11 to 87 on completions (about 35% null overall)",
+            "range": "-72 to 91 on completions (about 53% null overall; higher rate because the column is absent before 2006)",
         },
         "yards_gained": {
             "meaning": "Total yards gained on the play.",
             "type": "float",
-            "range": "-24 to 98",
+            "range": "-24 to 99",
         },
         "epa": {
             "meaning": "Expected Points Added on the play.",
             "type": "float",
-            "range": "-13.0 to 8.9 per play",
+            "range": "-13.15 to 8.93 per play",
         },
         "win_probability_added": {
             "meaning": "Change in win probability attributable to the play.",
             "type": "float",
-            "range": "-0.83 to 0.83 per play",
+            "range": "-1.0 to 1.0 per play",
             "renamed_from": "wpa",
         },
         "completion_pct_over_expected": {
             "meaning": (
                 "nflverse's BUILT-IN per-play CPOE in percentage points (actual completion minus "
                 "nflfastR's expected completion probability). This is the per-play source of avg_cpoe "
-                "in the mart. It is NOT the project's model_cpoe. See METRICS."
+                "in the mart. It is NOT the project's model_cpoe. See METRICS. "
+                "Null before 2006 (not charted); about 27% null overall."
             ),
             "type": "float",
-            "range": "-93 to 85 per play (about 4% null)",
+            "range": "-92 to 85 per play (null before 2006, about 27% null overall)",
             "renamed_from": "cpoe",
         },
         "pass_location": {
-            "meaning": "Side of the field targeted. One-hot encoded for the model into loc_left, loc_middle, loc_right.",
+            "meaning": "Side of the field targeted. One-hot encoded for the model into loc_left, loc_middle, loc_right. Null before 2006 (not charted); about 25% null overall.",
             "type": "string",
-            "range": "{left, middle, right} (about 0.4% null)",
+            "range": "{left, middle, right} (null before 2006, about 25% null overall)",
         },
         "score_differential": {
             "meaning": "Possession team score minus opponent score at the snap. Negative means trailing.",
             "type": "int",
-            "range": "-56 to 49",
+            "range": "-59 to 59",
         },
         "game_seconds_remaining": {
             "meaning": "Seconds remaining in the game at the snap.",

@@ -16,6 +16,11 @@ INSTRUCTION = (
     "For a QB accuracy question, report model_cpoe, actual completion %, expected completion %, "
     "and model vs raw rank when they differ. If a question needs both a model metric and raw "
     "stats, call both tools. If a tool errors or returns no row, say what failed; do not answer anyway.\n\n"
+    "run_cpoe is only valid from 2006 onward (air_yards was not charted before 2006); for seasons "
+    "before 2006, abstain on model_cpoe and offer raw stats from query_marts instead.\n\n"
+    "End every response with exactly these two lines:\n"
+    "CONFIDENCE: <high/medium/low> (<one sentence reason>)\n"
+    "CAVEATS: <one sentence, or 'None'>\n\n"
     + render_for_prompt()
 )
 

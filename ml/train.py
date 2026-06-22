@@ -14,6 +14,7 @@ DB_PATH = Path(__file__).parent.parent / "db" / "nfl.duckdb"
 
 # ── config ───────────────────────────────────────────────────────────────────
 NUMERIC_FEATURES = [
+    "season",
     "down",
     "yards_to_go",
     "yards_from_endzone",
@@ -63,7 +64,7 @@ def prepare_features(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def split_data(df: pd.DataFrame):
-    train = df[df["season"].isin([2020, 2021, 2022, 2023, 2024])]
+    train = df[df["season"].between(2006, 2024)]
     test  = df[df["season"] == 2025]
 
     # final feature list: numerics + one-hot columns
@@ -114,7 +115,7 @@ def main():
     print(f"  After dropping nulls: {len(df):,}")
 
     X_train, X_test, y_train, y_test, feature_cols = split_data(df)
-    print(f"  Train: {len(X_train):,} plays (2023–2024)")
+    print(f"  Train: {len(X_train):,} plays (2006-2024)")
     print(f"  Test:  {len(X_test):,} plays (2025)")
 
     # ── logistic regression ───────────────────────────────────────────────────
@@ -153,8 +154,27 @@ def main():
     # ── calibration plot ─────────────────────────────────────────────────────
     plot_calibration(y_test, prob_lr, prob_xgb)
 
+    # ── era-neutrality check ──────────────────────────────────────────────────
+    print("\nEra-neutrality check (league-avg model_cpoe per season, should be near zero):")
+    df["completion_prob"] = xgb_model.predict_proba(df[feature_cols])[:, 1]
+    df["model_cpoe"] = df[TARGET] - df["completion_prob"]
+    era_check = df.groupby("season")["model_cpoe"].mean().mul(100).round(2)
+    print(era_check.to_string())
+
+    # ── refit on full 2006-2025 and save ─────────────────────────────────────
+    print("\nRefitting on full 2006-2025 span...")
+    xgb_final = xgb.XGBClassifier(
+        n_estimators=300,
+        learning_rate=0.05,
+        max_depth=4,
+        subsample=0.8,
+        colsample_bytree=0.8,
+        eval_metric="logloss",
+        random_state=42,
+    )
+    xgb_final.fit(df[feature_cols], df[TARGET])
     model_path = Path(__file__).parent / "xgb_model.json"
-    xgb_model.save_model(model_path)
+    xgb_final.save_model(model_path)
     print(f"\nModel saved to {model_path}")
 
 if __name__ == "__main__":

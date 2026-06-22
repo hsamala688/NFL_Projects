@@ -1,6 +1,7 @@
 # secrets
 .env
 agent/.env
+backend/.env
 
 # ADK local session state
 .adk/
@@ -25,7 +26,8 @@ CLUSTER-10C-Submission/
 *.html
 .idea/
 data/raw/
-db/
+db/*
+!db/serving.duckdb
 logs/
 *.log
 target/
@@ -33,5 +35,9 @@ dbt_packages/
 nfl_analytics/logs/
 
 # ml + data for ml
-ml/xgb_model.json
 ml/qb_cpoe_2025.csv
+
+# frontend
+frontend/node_modules/
+frontend/dist/
+!frontend/index.html
