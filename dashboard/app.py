@@ -6,7 +6,7 @@ import plotly.express as px
 from pathlib import Path
 
 # ── paths ─────────────────────────────────────────────────────────────────────
-DB_PATH    = Path(__file__).parent.parent / "db" / "nfl.duckdb"
+DB_PATH    = Path(__file__).parent.parent / "db" / "serving.duckdb"
 MODEL_PATH = Path(__file__).parent.parent / "ml" / "xgb_model.json"
 
 # ── feature list — must match train.py exactly ────────────────────────────────
