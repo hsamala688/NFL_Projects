@@ -56,6 +56,7 @@ def load_ml_predictions(_model):
     df = conn.execute("""
         SELECT
             passer_player_name,
+            season,
             down,
             yards_to_go,
             yards_from_endzone,
@@ -85,7 +86,7 @@ def load_ml_predictions(_model):
         if col not in df.columns:
             df[col] = 0.0
 
-    final_features = NUMERIC_FEATURES + ["loc_left", "loc_middle", "loc_right"]
+    final_features = ["season"] + NUMERIC_FEATURES + ["loc_left", "loc_middle", "loc_right"]
 
     # Generate per-play completion probabilities
     df["completion_prob"] = _model.predict_proba(df[final_features])[:, 1]
