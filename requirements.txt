@@ -10,4 +10,4 @@ duckdb==1.5.2
 pandas==3.0.3
 numpy==2.4.5
 plotly==6.7.0
-sklearn==1.8.0
+scikit-learn==1.8.0
