@@ -48,6 +48,7 @@ def load_plays(season: int) -> pd.DataFrame:
         """
         SELECT
             passer_player_name,
+            possession_team,
             season,
             week,
             down,
@@ -98,36 +99,47 @@ def prepare_features(df: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
     return df, feature_cols
 
 
-def compute_qb_cpoe(df: pd.DataFrame) -> pd.DataFrame:
+def compute_qb_cpoe(df: pd.DataFrame, min_attempts: int = 100) -> pd.DataFrame:
     """
-    For each QB in the season:
+    One row per QB stint, meaning a player and the team he threw for:
+      - attempts:     pass attempts for that team
       - actual_pct:   raw completion percentage
-      - expected_pct: mean model-predicted probability across their attempts
+      - expected_pct: mean model-predicted probability across those attempts
       - model_cpoe:   actual_pct minus expected_pct
       - raw_rank:     rank by actual completion %
       - model_rank:   rank by model CPOE
-      - rank_diff:    how many spots the QB moves between the two rankings
+      - rank_diff:    how many spots the stint moves between the two rankings
+
+    A player qualifies on his season total across every team, and only then
+    is the display split per team. Qualifying on the stint instead would make
+    a short post-trade stint vanish rather than show up as the small sample
+    it is.
     """
-    qb = df.groupby("passer_player_name").agg(
+    stints = df.groupby(["passer_player_name", "possession_team"], as_index=False).agg(
         attempts        =("is_complete", "count"),
         actual_pct      =("is_complete", "mean"),
         expected_pct    =("completion_prob", "mean"),
-    ).reset_index()
+    )
 
-    qb["model_cpoe"] = qb["actual_pct"] - qb["expected_pct"]
+    # min 100 attempts, counted across the whole season rather than per stint
+    season_attempts = stints.groupby("passer_player_name")["attempts"].transform("sum")
+    stints = stints[season_attempts >= min_attempts].copy()
 
-    # min 100 attempts — consistent with mart_qb_season threshold
-    qb = qb[qb["attempts"] >= 100].copy()
+    stints["model_cpoe"] = stints["actual_pct"] - stints["expected_pct"]
 
-    qb["actual_pct"]   = (qb["actual_pct"]   * 100).round(1)
-    qb["expected_pct"] = (qb["expected_pct"]  * 100).round(1)
-    qb["model_cpoe"]   = (qb["model_cpoe"]    * 100).round(1)
+    stints["actual_pct"]   = (stints["actual_pct"]   * 100).round(1)
+    stints["expected_pct"] = (stints["expected_pct"]  * 100).round(1)
+    stints["model_cpoe"]   = (stints["model_cpoe"]    * 100).round(1)
 
-    qb["raw_rank"]   = qb["actual_pct"].rank(ascending=False).astype(int)
-    qb["model_rank"] = qb["model_cpoe"].rank(ascending=False).astype(int)
-    qb["rank_diff"]  = qb["raw_rank"] - qb["model_rank"]
+    # ranks are over the split population, so both halves of a trade compete
+    stints["raw_rank"]   = stints["actual_pct"].rank(ascending=False).astype(int)
+    stints["model_rank"] = stints["model_cpoe"].rank(ascending=False).astype(int)
+    stints["rank_diff"]  = stints["raw_rank"] - stints["model_rank"]
 
-    return qb.sort_values("model_rank")
+    stints = stints.rename(
+        columns={"passer_player_name": "player", "possession_team": "team"}
+    )
+    return stints.sort_values("model_rank")
 
 
 def main():
