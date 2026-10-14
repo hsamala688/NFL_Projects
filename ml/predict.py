@@ -1,3 +1,5 @@
+import argparse
+
 import duckdb
 import pandas as pd
 import xgboost as xgb
@@ -22,9 +24,10 @@ NUMERIC_FEATURES = [
 TARGET = "is_complete"
 
 
-def load_2025_plays() -> pd.DataFrame:
+def load_plays(season: int) -> pd.DataFrame:
     conn = duckdb.connect(str(DB_PATH), read_only=True)
-    df = conn.execute("""
+    df = conn.execute(
+        """
         SELECT
             passer_player_name,
             season,
@@ -40,8 +43,10 @@ def load_2025_plays() -> pd.DataFrame:
             no_huddle,
             is_complete
         FROM int_qb_plays
-        WHERE season = 2025
-    """).df()
+        WHERE season = ?
+        """,
+        [season],
+    ).df()
     conn.close()
     return df
 
@@ -65,7 +70,7 @@ def prepare_features(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
 
 def compute_qb_cpoe(df: pd.DataFrame) -> pd.DataFrame:
     """
-    For each QB in 2025:
+    For each QB in the season:
       - actual_pct:   raw completion percentage
       - expected_pct: mean model-predicted probability across their attempts
       - model_cpoe:   actual_pct minus expected_pct
@@ -96,8 +101,19 @@ def compute_qb_cpoe(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def main():
-    print("Loading 2025 plays...")
-    df = load_2025_plays()
+    parser = argparse.ArgumentParser(
+        description="Rank QBs by model-based CPOE for a season."
+    )
+    parser.add_argument(
+        "--season",
+        type=int,
+        default=2025,
+        help="Season to score. air_yards was not charted before 2006.",
+    )
+    season = parser.parse_args().season
+
+    print(f"Loading {season} plays...")
+    df = load_plays(season)
     print(f"  Plays loaded: {len(df):,}")
 
     df, feature_cols = prepare_features(df)
@@ -110,13 +126,13 @@ def main():
     print("Generating per-play completion probabilities...")
     df["completion_prob"] = model.predict_proba(df[feature_cols])[:, 1]
 
-    print("\n── QB Completion % vs Model Expected (2025, min 100 attempts) ──\n")
+    print(f"\n── QB Completion % vs Model Expected ({season}, min 100 attempts) ──\n")
     qb_summary = compute_qb_cpoe(df)
     pd.set_option("display.max_rows", 50)
     pd.set_option("display.width", 120)
     print(qb_summary.to_string(index=False))
 
-    out_path = Path(__file__).parent / "qb_cpoe_2025.csv"
+    out_path = Path(__file__).parent / f"qb_cpoe_{season}.csv"
     qb_summary.to_csv(out_path, index=False)
     print(f"\nSaved to {out_path}")
 

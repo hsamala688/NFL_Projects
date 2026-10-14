@@ -35,7 +35,7 @@ dbt_packages/
 nfl_analytics/logs/
 
 # ml + data for ml
-ml/qb_cpoe_2025.csv
+ml/qb_cpoe_*.csv
 
 # frontend
 frontend/node_modules/
