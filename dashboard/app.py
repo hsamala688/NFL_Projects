@@ -1,25 +1,22 @@
+import sys
+from pathlib import Path
+
+# dashboard/ is not a package, so the repo root has to be importable
+# before the shared feature code in ml/ can be pulled in.
+REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
 import streamlit as st
 import duckdb
 import pandas as pd
 import xgboost as xgb
 import plotly.express as px
-from pathlib import Path
+
+from ml.predict import MODEL_PATH, prepare_features
 
 # ── paths ─────────────────────────────────────────────────────────────────────
-DB_PATH    = Path(__file__).parent.parent / "db" / "serving.duckdb"
-MODEL_PATH = Path(__file__).parent.parent / "ml" / "xgb_model.json"
-
-# ── feature list — must match train.py exactly ────────────────────────────────
-NUMERIC_FEATURES = [
-    "down",
-    "yards_to_go",
-    "yards_from_endzone",
-    "air_yards",
-    "score_differential",
-    "game_seconds_remaining",
-    "shotgun",
-    "no_huddle",
-]
+DB_PATH = REPO_ROOT / "db" / "serving.duckdb"
 
 # ── data loaders ──────────────────────────────────────────────────────────────
 
@@ -72,24 +69,11 @@ def load_ml_predictions(_model):
     """).df()
     conn.close()
 
-    # Drop nulls on all feature + target columns — mirrors predict.py
-    feature_cols = NUMERIC_FEATURES + ["pass_location", "is_complete"]
-    df = df.dropna(subset=feature_cols).copy()
-
-    # One-hot encode pass_location — must match train.py exactly
-    dummies = pd.get_dummies(df["pass_location"], prefix="loc", dtype=float)
-    df = pd.concat([df.drop(columns=["pass_location"]), dummies], axis=1)
-
-    # Safety check: guarantee all three loc columns exist even if a value
-    # is absent in this slice (mirrors the safety check in predict.py)
-    for col in ["loc_left", "loc_middle", "loc_right"]:
-        if col not in df.columns:
-            df[col] = 0.0
-
-    final_features = ["season"] + NUMERIC_FEATURES + ["loc_left", "loc_middle", "loc_right"]
+    # Build the model's own feature columns, read off the saved artifact.
+    df, feature_cols = prepare_features(df)
 
     # Generate per-play completion probabilities
-    df["completion_prob"] = _model.predict_proba(df[final_features])[:, 1]
+    df["completion_prob"] = _model.predict_proba(df[feature_cols])[:, 1]
 
     # Aggregate to QB level — mirrors compute_qb_cpoe() in predict.py
     qb = df.groupby("passer_player_name").agg(

@@ -9,19 +9,37 @@ from pathlib import Path
 DB_PATH    = Path(__file__).parent.parent / "db" / "nfl.duckdb"
 MODEL_PATH = Path(__file__).parent / "xgb_model.json"
 
-# ── must match train.py exactly ───────────────────────────────────────────────
-NUMERIC_FEATURES = [
-    "season",
-    "down",
-    "yards_to_go",
-    "yards_from_endzone",
-    "air_yards",
-    "score_differential",
-    "game_seconds_remaining",
-    "shotgun",
-    "no_huddle",
-]
+# ── feature contract ──────────────────────────────────────────────────────────
+# The saved model records the exact columns, in the exact order, it was
+# fitted on. Reading that list back is the single source of truth for
+# inference, so predict.py and the dashboard cannot drift away from
+# train.py through hand-maintenance.
 TARGET = "is_complete"
+CATEGORICAL_FEATURE = "pass_location"
+ONE_HOT_PREFIX = "loc"
+
+_feature_names: list[str] | None = None
+
+
+def load_feature_names(model_path: Path = MODEL_PATH) -> list[str]:
+    """Read the authoritative ordered feature list off the saved model."""
+    global _feature_names
+    if _feature_names is None:
+        booster = xgb.Booster()
+        booster.load_model(str(model_path))
+        names = booster.feature_names
+        if not names:
+            raise ValueError(
+                f"{model_path} records no feature_names. Retrain with "
+                f"train.py, which writes them when it saves the model."
+            )
+        if len(names) != booster.num_features():
+            raise ValueError(
+                f"{model_path} is inconsistent: {len(names)} feature_names "
+                f"but num_feature is {booster.num_features()}."
+            )
+        _feature_names = list(names)
+    return _feature_names
 
 
 def load_plays(season: int) -> pd.DataFrame:
@@ -51,20 +69,32 @@ def load_plays(season: int) -> pd.DataFrame:
     return df
 
 
-def prepare_features(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
-    feature_cols = NUMERIC_FEATURES + ["pass_location", TARGET]
-    df = df.dropna(subset=feature_cols).copy()
+def prepare_features(df: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
+    """
+    Build exactly the columns the model was fitted on, in the model's order.
 
-    # one-hot encode pass_location — must match train.py
-    dummies = pd.get_dummies(df["pass_location"], prefix="loc", dtype=float)
-    df = pd.concat([df.drop(columns=["pass_location"]), dummies], axis=1)
+    Returns the frame plus the ordered feature list, so callers select with
+    df[feature_cols] rather than assuming a layout.
+    """
+    feature_cols = load_feature_names()
 
-    # ensure all three loc columns exist even if one value is missing in this slice
-    for col in ["loc_left", "loc_middle", "loc_right"]:
+    # Everything the model wants that is not one-hot encoded comes straight
+    # off the query, so those are the columns a null disqualifies a play on.
+    raw_cols = [c for c in feature_cols if not c.startswith(f"{ONE_HOT_PREFIX}_")]
+    df = df.dropna(subset=raw_cols + [CATEGORICAL_FEATURE, TARGET]).copy()
+
+    dummies = pd.get_dummies(
+        df[CATEGORICAL_FEATURE], prefix=ONE_HOT_PREFIX, dtype=float
+    )
+    df = pd.concat([df.drop(columns=[CATEGORICAL_FEATURE]), dummies], axis=1)
+
+    # The model fixes which one-hot columns exist. Supply as zeros any the
+    # slice never saw. A category the model was never trained on simply goes
+    # unselected here, instead of shifting every column to its right.
+    for col in feature_cols:
         if col not in df.columns:
             df[col] = 0.0
 
-    feature_cols = NUMERIC_FEATURES + ["loc_left", "loc_middle", "loc_right"]
     return df, feature_cols
 
 
