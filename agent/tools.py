@@ -115,8 +115,10 @@ def run_cpoe(season: int = 2025) -> dict:
 
     Use this for accuracy or expectation-adjusted questions: who is actually good,
     who outperforms or underperforms expectation. Applies the project's XGBoost
-    model to that season's pass attempts and returns, per QB with at least 100
-    attempts: actual_pct, expected_pct, model_cpoe, raw_rank, model_rank, rank_diff.
+    model to that season's pass attempts and returns, for every QB with at least
+    100 attempts on the season: player, team, attempts, actual_pct, expected_pct,
+    model_cpoe, raw_rank, model_rank, rank_diff. A QB who changed teams mid-season
+    appears once per team, so his attempts are split across those rows.
     Returns status plus rows, or an error message.
     """
     if season < 2006:
@@ -133,9 +135,10 @@ def run_cpoe(season: int = 2025) -> dict:
         conn = duckdb.connect(str(_DB_PATH), read_only=True, config={"enable_external_access": False})
         df = conn.execute(
             """
-            SELECT passer_player_name, season, week, down, yards_to_go,
-                   yards_from_endzone, air_yards, pass_location, score_differential,
-                   game_seconds_remaining, shotgun, no_huddle, is_complete
+            SELECT passer_player_name, possession_team, season, week, down,
+                   yards_to_go, yards_from_endzone, air_yards, pass_location,
+                   score_differential, game_seconds_remaining, shotgun, no_huddle,
+                   is_complete
             FROM int_qb_plays
             WHERE season = ?
             """,
