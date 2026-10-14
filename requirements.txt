@@ -11,3 +11,9 @@ pandas==3.0.3
 numpy==2.4.5
 plotly==6.7.0
 scikit-learn==1.8.0
+nflreadpy==0.1.5
+polars==1.40.1
+dbt-core==1.11.11
+dbt-duckdb==1.10.1
+streamlit==1.58.0
+matplotlib==3.10.9
