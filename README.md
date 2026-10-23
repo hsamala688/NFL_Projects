@@ -112,8 +112,8 @@ nfl_analytics:
 ### 3. Run the full pipeline
 
 ```bash
-# Pull raw data (2006 is the model floor, where charted features like air_yards exist)
-python ingestion/pull_pbp.py --seasons 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025
+# Pull raw data (1999 onward; 2006 is the model floor, where charted features like air_yards exist)
+python ingestion/pull_pbp.py --seasons 1999 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025
 
 # Register DuckDB views
 python ingestion/load_duckdb.py
@@ -143,7 +143,7 @@ streamlit run dashboard/app.py
 ### Ingestion and storage
 `ingestion/pull_pbp.py` pulls play-by-play data via `nflreadpy` and writes one snappy-compressed Parquet file per season. `ingestion/load_duckdb.py` registers each season as a named DuckDB view plus a unified `pbp` view that globs all seasons. DuckDB reads the Parquet files directly, so `db/nfl.duckdb` stores only metadata and the underlying data stays in regenerable Parquet.
 
-The data spans 20 seasons (2006 to 2025), 469,122 pass attempts. The 2006 floor is deliberate: charted features like `air_yards` and `pass_location` become available that year, which is what the model needs. Raw stats like EPA reach further back, but 2006 is the model floor. `nflreadpy` normalizes all team codes to current franchise identifiers, so historical codes (SD, STL, OAK) never appear.
+The data spans 27 seasons (1999 to 2025), 469,122 pass attempts. Two floors are deliberate. Raw stats like completion percentage, EPA and WPA are populated from 1999 onward. Charted features like `air_yards` and `pass_location` only exist from 2006, so the model floor is 2006 and 350,024 attempts carry the complete model feature set. The unified `pbp` view uses `union_by_name=true` so the older seasons resolve the absent charted columns to null instead of failing on the schema mismatch. `nflreadpy` normalizes all team codes to current franchise identifiers, so historical codes (SD, STL, OAK) never appear.
 
 ### dbt models
 
