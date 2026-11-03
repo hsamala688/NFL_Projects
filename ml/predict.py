@@ -108,7 +108,9 @@ def main():
     model.load_model(MODEL_PATH)
 
     print("Generating per-play completion probabilities...")
-    df["completion_prob"] = model.predict_proba(df[feature_cols])[:, 1]
+    # float64 because predict_proba returns float32, which cannot represent
+    # the rounded percentages compute_qb_cpoe produces (63.6 lands as 63.599998)
+    df["completion_prob"] = model.predict_proba(df[feature_cols])[:, 1].astype("float64")
 
     print("\n── QB Completion % vs Model Expected (2025, min 100 attempts) ──\n")
     qb_summary = compute_qb_cpoe(df)
