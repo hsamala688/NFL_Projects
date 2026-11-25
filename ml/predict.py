@@ -15,6 +15,15 @@ MODEL_PATH = Path(__file__).parent / "xgb_model.json"
 # inference, so predict.py and the dashboard cannot drift away from
 # train.py through hand-maintenance.
 TARGET = "is_complete"
+
+# The exact columns, in order, that compute_qb_cpoe publishes. This is the
+# qb_cpoe half of the artifact contract the portfolio repo consumes, so the
+# order lives here rather than falling out of groupby's key placement.
+CPOE_COLUMNS = [
+    "player", "player_id", "team", "attempts",
+    "actual_pct", "expected_pct", "model_cpoe",
+    "raw_rank", "model_rank", "rank_diff",
+]
 CATEGORICAL_FEATURE = "pass_location"
 ONE_HOT_PREFIX = "loc"
 
@@ -47,6 +56,7 @@ def load_plays(season: int) -> pd.DataFrame:
     df = conn.execute(
         """
         SELECT
+            passer_player_id,
             passer_player_name,
             possession_team,
             season,
@@ -101,7 +111,8 @@ def prepare_features(df: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
 
 def compute_qb_cpoe(df: pd.DataFrame, min_attempts: int = 100) -> pd.DataFrame:
     """
-    One row per QB stint, meaning a player and the team he threw for:
+    One row per QB stint, keyed on (passer_player_id, possession_team):
+      - player_id:    gsis id, the join key the portfolio contract expects
       - attempts:     pass attempts for that team
       - actual_pct:   raw completion percentage
       - expected_pct: mean model-predicted probability across those attempts
@@ -114,15 +125,25 @@ def compute_qb_cpoe(df: pd.DataFrame, min_attempts: int = 100) -> pd.DataFrame:
     is the display split per team. Qualifying on the stint instead would make
     a short post-trade stint vanish rather than show up as the small sample
     it is.
+
+    The key is the id, not the name. An abbreviated name is neither unique nor
+    stable: 2009 and 2007 both have an "M.Moore" that is two different players
+    with 139 and 112 combined attempts, so name-keying silently merged them
+    into one qualifying row, and a single id can carry two spellings of its own
+    name inside one season.
     """
-    stints = df.groupby(["passer_player_name", "possession_team"], as_index=False).agg(
+    stints = df.groupby(["passer_player_id", "possession_team"], as_index=False).agg(
+        # max() rather than first(): the name is display only, it is not part of
+        # the key, and one id can carry two spellings within a season, so the
+        # choice has to be deterministic regardless of row order.
+        player          =("passer_player_name", "max"),
         attempts        =("is_complete", "count"),
         actual_pct      =("is_complete", "mean"),
         expected_pct    =("completion_prob", "mean"),
     )
 
     # min 100 attempts, counted across the whole season rather than per stint
-    season_attempts = stints.groupby("passer_player_name")["attempts"].transform("sum")
+    season_attempts = stints.groupby("passer_player_id")["attempts"].transform("sum")
     stints = stints[season_attempts >= min_attempts].copy()
 
     stints["model_cpoe"] = stints["actual_pct"] - stints["expected_pct"]
@@ -137,9 +158,9 @@ def compute_qb_cpoe(df: pd.DataFrame, min_attempts: int = 100) -> pd.DataFrame:
     stints["rank_diff"]  = stints["raw_rank"] - stints["model_rank"]
 
     stints = stints.rename(
-        columns={"passer_player_name": "player", "possession_team": "team"}
+        columns={"passer_player_id": "player_id", "possession_team": "team"}
     )
-    return stints.sort_values("model_rank")
+    return stints[CPOE_COLUMNS].sort_values("model_rank")
 
 
 def main():
