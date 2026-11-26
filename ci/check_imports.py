@@ -29,6 +29,7 @@ IMPORT_MODULES = [
     "ingestion.pull_pbp",
     "ingestion.load_duckdb",
     "serving.build_serving_db",
+    "serving.publish",
     "ml.train",
     "ml.predict",
     "agent.semantic_layer",
