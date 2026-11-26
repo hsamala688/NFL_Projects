@@ -1,0 +1,52 @@
+name: install
+
+# Guards the claim that a fresh clone plus `pip install -r requirements.txt`
+# gives a working repo. requirements.txt had drifted out of sync with the code's
+# real imports once already, and nothing caught it until someone built a clean
+# environment by hand.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: install-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  install:
+    name: fresh install and import
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: install pinned requirements
+        run: pip install -r requirements.txt
+
+      - name: report the resolved versions
+        # everything is == pinned, so this should be identical run to run.
+        # a diff here means a pin moved or a transitive dep went unpinned.
+        run: pip list
+
+      - name: dbt CLI is on PATH
+        # dbt-core and dbt-duckdb are the only two pins nothing imports:
+        # flows/nfl_pipeline.py shells out to `dbt run` and `dbt test`, so an
+        # import sweep alone would still pass if both pins disappeared.
+        run: dbt --version
+
+      - name: every module imports
+        run: python ci/check_imports.py
+
+      - name: the run left the tree clean
+        # a module that writes a tracked file at import time would show up here.
+        # ml/visualize.py does exactly that, which is why check_imports.py only
+        # compiles it instead of importing it.
+        run: git diff --exit-code
