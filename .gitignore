@@ -26,8 +26,20 @@ CLUSTER-10C-Submission/
 *.html
 .idea/
 data/raw/
+
+# db/serving.duckdb is built by serving/build_serving_db.py and published to
+# Cloud Storage with each run (PLAN.md section 2). The agent pulls it from
+# there at cold start, so it is regenerable and does not belong in git. It used
+# to be committed through a !negation here, which put 17 MB of binary into
+# history on every run.
 db/*
-!db/serving.duckdb
+
+# Hand exported analysis artifacts, and the raw CSV the nflreadpy parquet
+# pipeline replaced. Regenerable from notebooks/ or by re-running ingestion.
+data/play-by-play/
+data/player-logs/
+data/team-logs/
+data/processed/
 logs/
 *.log
 target/
