@@ -88,8 +88,10 @@ def load_ml_predictions(_model):
 
     final_features = ["season"] + NUMERIC_FEATURES + ["loc_left", "loc_middle", "loc_right"]
 
-    # Generate per-play completion probabilities
-    df["completion_prob"] = _model.predict_proba(df[final_features])[:, 1]
+    # Generate per-play completion probabilities. float64 because predict_proba
+    # returns float32, which cannot represent the rounded percentages below
+    # (63.6 lands as 63.599998)
+    df["completion_prob"] = _model.predict_proba(df[final_features])[:, 1].astype("float64")
 
     # Aggregate to QB level — mirrors compute_qb_cpoe() in predict.py
     qb = df.groupby("passer_player_name").agg(
