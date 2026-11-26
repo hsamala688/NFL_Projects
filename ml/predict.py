@@ -1,3 +1,5 @@
+import argparse
+
 import duckdb
 import pandas as pd
 import xgboost as xgb
@@ -7,26 +9,56 @@ from pathlib import Path
 DB_PATH    = Path(__file__).parent.parent / "db" / "nfl.duckdb"
 MODEL_PATH = Path(__file__).parent / "xgb_model.json"
 
-# ── must match train.py exactly ───────────────────────────────────────────────
-NUMERIC_FEATURES = [
-    "season",
-    "down",
-    "yards_to_go",
-    "yards_from_endzone",
-    "air_yards",
-    "score_differential",
-    "game_seconds_remaining",
-    "shotgun",
-    "no_huddle",
-]
+# ── feature contract ──────────────────────────────────────────────────────────
+# The saved model records the exact columns, in the exact order, it was
+# fitted on. Reading that list back is the single source of truth for
+# inference, so predict.py and the dashboard cannot drift away from
+# train.py through hand-maintenance.
 TARGET = "is_complete"
 
+# The exact columns, in order, that compute_qb_cpoe publishes. This is the
+# qb_cpoe half of the artifact contract the portfolio repo consumes, so the
+# order lives here rather than falling out of groupby's key placement.
+CPOE_COLUMNS = [
+    "player", "player_id", "team", "attempts",
+    "actual_pct", "expected_pct", "model_cpoe",
+    "raw_rank", "model_rank", "rank_diff",
+]
+CATEGORICAL_FEATURE = "pass_location"
+ONE_HOT_PREFIX = "loc"
 
-def load_2025_plays() -> pd.DataFrame:
+_feature_names: list[str] | None = None
+
+
+def load_feature_names(model_path: Path = MODEL_PATH) -> list[str]:
+    """Read the authoritative ordered feature list off the saved model."""
+    global _feature_names
+    if _feature_names is None:
+        booster = xgb.Booster()
+        booster.load_model(str(model_path))
+        names = booster.feature_names
+        if not names:
+            raise ValueError(
+                f"{model_path} records no feature_names. Retrain with "
+                f"train.py, which writes them when it saves the model."
+            )
+        if len(names) != booster.num_features():
+            raise ValueError(
+                f"{model_path} is inconsistent: {len(names)} feature_names "
+                f"but num_feature is {booster.num_features()}."
+            )
+        _feature_names = list(names)
+    return _feature_names
+
+
+def load_plays(season: int) -> pd.DataFrame:
     conn = duckdb.connect(str(DB_PATH), read_only=True)
-    df = conn.execute("""
+    df = conn.execute(
+        """
         SELECT
+            passer_player_id,
             passer_player_name,
+            possession_team,
             season,
             week,
             down,
@@ -40,64 +72,111 @@ def load_2025_plays() -> pd.DataFrame:
             no_huddle,
             is_complete
         FROM int_qb_plays
-        WHERE season = 2025
-    """).df()
+        WHERE season = ?
+        """,
+        [season],
+    ).df()
     conn.close()
     return df
 
 
-def prepare_features(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
-    feature_cols = NUMERIC_FEATURES + ["pass_location", TARGET]
-    df = df.dropna(subset=feature_cols).copy()
+def prepare_features(df: pd.DataFrame) -> tuple[pd.DataFrame, list[str]]:
+    """
+    Build exactly the columns the model was fitted on, in the model's order.
 
-    # one-hot encode pass_location — must match train.py
-    dummies = pd.get_dummies(df["pass_location"], prefix="loc", dtype=float)
-    df = pd.concat([df.drop(columns=["pass_location"]), dummies], axis=1)
+    Returns the frame plus the ordered feature list, so callers select with
+    df[feature_cols] rather than assuming a layout.
+    """
+    feature_cols = load_feature_names()
 
-    # ensure all three loc columns exist even if one value is missing in this slice
-    for col in ["loc_left", "loc_middle", "loc_right"]:
+    # Everything the model wants that is not one-hot encoded comes straight
+    # off the query, so those are the columns a null disqualifies a play on.
+    raw_cols = [c for c in feature_cols if not c.startswith(f"{ONE_HOT_PREFIX}_")]
+    df = df.dropna(subset=raw_cols + [CATEGORICAL_FEATURE, TARGET]).copy()
+
+    dummies = pd.get_dummies(
+        df[CATEGORICAL_FEATURE], prefix=ONE_HOT_PREFIX, dtype=float
+    )
+    df = pd.concat([df.drop(columns=[CATEGORICAL_FEATURE]), dummies], axis=1)
+
+    # The model fixes which one-hot columns exist. Supply as zeros any the
+    # slice never saw. A category the model was never trained on simply goes
+    # unselected here, instead of shifting every column to its right.
+    for col in feature_cols:
         if col not in df.columns:
             df[col] = 0.0
 
-    feature_cols = NUMERIC_FEATURES + ["loc_left", "loc_middle", "loc_right"]
     return df, feature_cols
 
 
-def compute_qb_cpoe(df: pd.DataFrame) -> pd.DataFrame:
+def compute_qb_cpoe(df: pd.DataFrame, min_attempts: int = 100) -> pd.DataFrame:
     """
-    For each QB in 2025:
+    One row per QB stint, keyed on (passer_player_id, possession_team):
+      - player_id:    gsis id, the join key the portfolio contract expects
+      - attempts:     pass attempts for that team
       - actual_pct:   raw completion percentage
-      - expected_pct: mean model-predicted probability across their attempts
+      - expected_pct: mean model-predicted probability across those attempts
       - model_cpoe:   actual_pct minus expected_pct
       - raw_rank:     rank by actual completion %
       - model_rank:   rank by model CPOE
-      - rank_diff:    how many spots the QB moves between the two rankings
+      - rank_diff:    how many spots the stint moves between the two rankings
+
+    A player qualifies on his season total across every team, and only then
+    is the display split per team. Qualifying on the stint instead would make
+    a short post-trade stint vanish rather than show up as the small sample
+    it is.
+
+    The key is the id, not the name. An abbreviated name is neither unique nor
+    stable: 2009 and 2007 both have an "M.Moore" that is two different players
+    with 139 and 112 combined attempts, so name-keying silently merged them
+    into one qualifying row, and a single id can carry two spellings of its own
+    name inside one season.
     """
-    qb = df.groupby("passer_player_name").agg(
+    stints = df.groupby(["passer_player_id", "possession_team"], as_index=False).agg(
+        # max() rather than first(): the name is display only, it is not part of
+        # the key, and one id can carry two spellings within a season, so the
+        # choice has to be deterministic regardless of row order.
+        player          =("passer_player_name", "max"),
         attempts        =("is_complete", "count"),
         actual_pct      =("is_complete", "mean"),
         expected_pct    =("completion_prob", "mean"),
-    ).reset_index()
+    )
 
-    qb["model_cpoe"] = qb["actual_pct"] - qb["expected_pct"]
+    # min 100 attempts, counted across the whole season rather than per stint
+    season_attempts = stints.groupby("passer_player_id")["attempts"].transform("sum")
+    stints = stints[season_attempts >= min_attempts].copy()
 
-    # min 100 attempts — consistent with mart_qb_season threshold
-    qb = qb[qb["attempts"] >= 100].copy()
+    stints["model_cpoe"] = stints["actual_pct"] - stints["expected_pct"]
 
-    qb["actual_pct"]   = (qb["actual_pct"]   * 100).round(1)
-    qb["expected_pct"] = (qb["expected_pct"]  * 100).round(1)
-    qb["model_cpoe"]   = (qb["model_cpoe"]    * 100).round(1)
+    stints["actual_pct"]   = (stints["actual_pct"]   * 100).round(1)
+    stints["expected_pct"] = (stints["expected_pct"]  * 100).round(1)
+    stints["model_cpoe"]   = (stints["model_cpoe"]    * 100).round(1)
 
-    qb["raw_rank"]   = qb["actual_pct"].rank(ascending=False).astype(int)
-    qb["model_rank"] = qb["model_cpoe"].rank(ascending=False).astype(int)
-    qb["rank_diff"]  = qb["raw_rank"] - qb["model_rank"]
+    # ranks are over the split population, so both halves of a trade compete
+    stints["raw_rank"]   = stints["actual_pct"].rank(ascending=False).astype(int)
+    stints["model_rank"] = stints["model_cpoe"].rank(ascending=False).astype(int)
+    stints["rank_diff"]  = stints["raw_rank"] - stints["model_rank"]
 
-    return qb.sort_values("model_rank")
+    stints = stints.rename(
+        columns={"passer_player_id": "player_id", "possession_team": "team"}
+    )
+    return stints[CPOE_COLUMNS].sort_values("model_rank")
 
 
 def main():
-    print("Loading 2025 plays...")
-    df = load_2025_plays()
+    parser = argparse.ArgumentParser(
+        description="Rank QBs by model-based CPOE for a season."
+    )
+    parser.add_argument(
+        "--season",
+        type=int,
+        default=2025,
+        help="Season to score. air_yards was not charted before 2006.",
+    )
+    season = parser.parse_args().season
+
+    print(f"Loading {season} plays...")
+    df = load_plays(season)
     print(f"  Plays loaded: {len(df):,}")
 
     df, feature_cols = prepare_features(df)
@@ -112,13 +191,13 @@ def main():
     # the rounded percentages compute_qb_cpoe produces (63.6 lands as 63.599998)
     df["completion_prob"] = model.predict_proba(df[feature_cols])[:, 1].astype("float64")
 
-    print("\n── QB Completion % vs Model Expected (2025, min 100 attempts) ──\n")
+    print(f"\n── QB Completion % vs Model Expected ({season}, min 100 attempts) ──\n")
     qb_summary = compute_qb_cpoe(df)
     pd.set_option("display.max_rows", 50)
     pd.set_option("display.width", 120)
     print(qb_summary.to_string(index=False))
 
-    out_path = Path(__file__).parent / "qb_cpoe_2025.csv"
+    out_path = Path(__file__).parent / f"qb_cpoe_{season}.csv"
     qb_summary.to_csv(out_path, index=False)
     print(f"\nSaved to {out_path}")
 
