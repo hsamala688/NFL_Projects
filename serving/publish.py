@@ -27,6 +27,7 @@ Run from the repo root:
 import argparse
 import json
 import os
+import shutil
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -206,7 +207,9 @@ def build_payload(
     }
 
 
-def write_local(payload: dict, out_dir: Path) -> tuple[Path, Path]:
+def write_local(
+    payload: dict, out_dir: Path, serving_db: Path | None = None
+) -> tuple[Path, Path]:
     """
     Write the same two objects to a local directory, same relative layout.
 
@@ -220,6 +223,9 @@ def write_local(payload: dict, out_dir: Path) -> tuple[Path, Path]:
     stats_path = run_dir / "stats.json"
     stats_path.write_text(json.dumps(payload, indent=2) + "\n")
 
+    if serving_db is not None:
+        shutil.copyfile(serving_db, run_dir / serving_db.name)
+
     pointer_dir = out_dir / "latest"
     pointer_dir.mkdir(parents=True, exist_ok=True)
     pointer_path = pointer_dir / "manifest.json"
@@ -228,7 +234,9 @@ def write_local(payload: dict, out_dir: Path) -> tuple[Path, Path]:
     return stats_path, pointer_path
 
 
-def publish_to_gcs(bucket_name: str, payload: dict) -> tuple[str, str]:
+def publish_to_gcs(
+    bucket_name: str, payload: dict, serving_db: Path | None = None
+) -> tuple[str, str]:
     """
     Upload the payload, then the pointer. Order is the whole point.
 
@@ -245,6 +253,15 @@ def publish_to_gcs(bucket_name: str, payload: dict) -> tuple[str, str]:
     blob.upload_from_string(
         json.dumps(payload, indent=2) + "\n", content_type="application/json"
     )
+
+    # The agent pulls this at cold start (PLAN.md section 2 lists it in the run
+    # directory, and section 5 sizes the pull). The edge never reads it, but it
+    # belongs to the same run, so it has to land before the pointer too.
+    if serving_db is not None:
+        db_object = manifest["artifact_path"].strip("/") + "/" + serving_db.name
+        db_blob = bucket.blob(db_object)
+        db_blob.cache_control = "no-store"
+        db_blob.upload_from_filename(str(serving_db), content_type="application/octet-stream")
 
     # Only now the pointer, and never cached: the edge polls it every 5 minutes
     # and a cached copy would hide a fresh run for as long as the TTL.
@@ -303,12 +320,12 @@ def main() -> int:
     print(f"  qb_cpoe rows: {len(payload['qb_cpoe']):,}")
 
     if args.out_dir:
-        stats_path, pointer_path = write_local(payload, args.out_dir)
+        stats_path, pointer_path = write_local(payload, args.out_dir, args.serving_db)
         print(f"  wrote {stats_path}")
         print(f"  wrote {pointer_path}  (pointer, last)")
 
     if args.bucket:
-        stats_uri, pointer_uri = publish_to_gcs(args.bucket, payload)
+        stats_uri, pointer_uri = publish_to_gcs(args.bucket, payload, args.serving_db)
         print(f"  uploaded {stats_uri}")
         print(f"  uploaded {pointer_uri}  (pointer, last)")
 
