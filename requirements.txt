@@ -18,3 +18,4 @@ dbt-core==1.11.11
 dbt-duckdb==1.10.1
 streamlit==1.58.0
 matplotlib==3.10.9
+google-cloud-storage==3.17.2
